@@ -1,0 +1,191 @@
+/* Simpele CSS Remedy */
+/* naar een idee van Jen Simmons */
+/* github.com/jensimmons/cssremedy */
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+    --main-txt-color: #000000;
+    --sec-txt-color: #707070;
+    --trd-text-color: #9E3501;
+
+    --main-bg-color: #ffffff;
+    --sec-bg-color: #F5F5F5;
+
+    --button-bg-color: #000000;
+    --button-txt-color: #ffffff;
+}
+
+@font-face {
+	font-family: titelsFutura;
+	src: url(FuturaBoldfont.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+
+header h1 {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background: var(--main-bg-color);
+}
+
+header img:first-of-type {
+    width: auto; 
+    height: 1.3em; 
+    object-fit: contain;
+    margin-left: 1em; 
+}
+
+header img {
+    width: auto; 
+    height: 1.5em; 
+    object-fit: contain;
+    margin-right: 0.25em;
+}
+
+header > ul {
+    margin-left: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--main-bg-color);
+}
+
+
+/**********/
+/* BANNER */
+/**********/
+
+section:nth-of-type(1) article:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+    height: 35rem; 
+    overflow: hidden;
+}
+
+section:nth-of-type(1) article:nth-of-type(1) img {
+	height: 35rem;
+	width: auto;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/***********************/
+/* BANNER ONDERSCHRIFT */
+/***********************/
+
+section:nth-of-type(1) article:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    text-align: center;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) h2 {
+	font-family: titelsFutura;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin: 1rem;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) p {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+	padding: 1rem;
+	margin: 0;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) a {
+    background-color: var(--button-bg-color);
+    color: var(--button-txt-color);
+    font-family: Helvetica, arial, sans-serif;
+    text-decoration: none;
+
+
+    padding: .7rem;
+    border-radius: 3rem;
+    margin: .5rem;
+}
+
+/*********************/
+/* KORTING CARROUSEL */
+/*********************/
+
+section:nth-of-type(2) h2 {
+	font-family: titelsFutura;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	margin: 1rem;
+}
+
+section:nth-of-type(2) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(2) li {
+    padding: 1em;
+}
+
+section:nth-of-type(2) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(2) img {
+    height: 20rem;
+}
+
+section:nth-of-type(2) h3 {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(2) h4 {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(2) p:nth-of-type(1) {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .1rem 0rem;
+}
+
+section:nth-of-type(2) p:nth-of-type(2) {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    text-decoration: line-through;
+    margin: .1rem 0rem;
+
+}
+
