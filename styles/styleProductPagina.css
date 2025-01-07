@@ -1,0 +1,661 @@
+/* Simpele CSS Remedy */
+/* naar een idee van Jen Simmons */
+/* github.com/jensimmons/cssremedy */
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+    --main-txt-color: #000000;
+    --sec-txt-color: #707070;
+    --trd-text-color: #9E3501;
+    --pic-text-color: #ffffff;
+
+    --main-bg-color: #ffffff;
+    --sec-bg-color: #F5F5F5;
+    --trd-bg-color: #CACACB;
+
+    --button-bg-color: #000000;
+    --button-txt-color: #ffffff;
+}
+
+@font-face {
+	font-family: titelsFutura;
+	src: url(FuturaBoldfont.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background: var(--main-bg-color);
+}
+
+header img:first-of-type {
+    width: auto; 
+    height: 1.3em; 
+    object-fit: contain;
+    margin-left: 1em; 
+}
+
+header img {
+    width: auto; 
+    height: 1.5em; 
+    object-fit: contain;
+    margin-right: 0.25em;
+}
+
+header > ul {
+    margin-left: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--main-bg-color);
+}
+
+/***********/
+/* PRODUCT */
+/***********/
+
+section:nth-of-type(1) {
+    font-family: Helvetica, arial, sans-serif;
+}
+
+section:nth-of-type(1) h1 {
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+    color: var(--main-txt-color);
+}
+
+section:nth-of-type(1) p:nth-of-type(1) {
+	font-size: 1rem;
+	margin: 1rem;
+    font-weight: normal;
+    color: var(--sec-txt-color);
+}
+
+section:nth-of-type(1) p:nth-of-type(2) {
+	font-size: 1rem;
+	margin: 1rem;
+    font-weight: normal;
+    color: var(--main-txt-color);
+}
+
+/*************/
+/* SLIDESHOW */
+/*************/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: .5rem;
+    width: .5rem;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/***********/
+/* PRODUCT */
+/***********/
+
+section:nth-of-type(2) {
+    font-family: Helvetica, arial, sans-serif;
+}
+
+section:nth-of-type(2) h2 {
+	font-size: 1rem;
+	margin: 1rem;
+    font-weight: 580;
+    color: var(--main-txt-color);
+}
+
+section:nth-of-type(2) a {
+	font-size: 1rem;
+	margin: 1rem;
+    font-weight: normal;
+    color: var(--main-txt-color);
+    text-decoration: none;
+}
+
+section:nth-of-type(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    align-content: stretch;
+    padding: 1em;
+    margin: 0;
+
+}
+
+section:nth-of-type(2) li {
+    width: 15vw;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: .1em;
+}
+
+
+section:nth-of-type(2) li button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 0.5rem;
+
+    font-size: 1em; 
+    width: 12rem;
+    height: 3rem;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--sec-bg-color);
+    border-radius: 5px;
+}
+
+section:nth-of-type(2) li button:hover {
+    border-color: var(--txt-bg-color);
+}
+
+section:nth-of-type(2) p {
+    font-size: .9rem;
+    margin: 0;
+    padding: 0 0 0 1em;
+    color: var(--sec-txt-color);
+}
+
+/**********************/
+/* WINKELMAND KNOPPEN */
+/**********************/
+
+section:nth-of-type(3) {
+    font-family: Helvetica, arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+section:nth-of-type(3) p:nth-of-type(1) {
+    font-size: 1em;
+    text-align: center; 
+}
+
+section:nth-of-type(3) button:nth-of-type(1) {
+    font-size: 1em; 
+    width: 100%;
+    height: 4rem;
+    color: var(--main-bg-color);
+    background-color: var(--main-txt-color);
+    border: 1px solid var(--sec-bg-color);
+    border-radius: 100px;
+}
+
+section:nth-of-type(3) button:nth-of-type(1):hover {
+    background-color: var(--sec-txt-color);
+}
+
+section:nth-of-type(3) button:nth-of-type(2) {
+    font-size: 1em; 
+    width: 100%;
+    height: 4rem;
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--sec-bg-color);
+    border-radius: 100px;
+    margin: 1em 0 0 0;
+}
+
+section:nth-of-type(3) button:nth-of-type(2):hover {
+    border-color: var(--main-txt-color);
+}
+
+section:nth-of-type(3) p:nth-of-type(2) {
+    font-size: .9em;
+    text-align: center; 
+    color: var(--sec-txt-color);
+}
+
+section:nth-of-type(3) p:nth-of-type(3) {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--main-txt-color);
+}
+
+section:nth-of-type(3) button:nth-of-type(3) {
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--main-bg-color);
+    border-width: 0;
+    text-align: left;
+    padding: 0;
+    text-decoration: underline;
+}
+
+section:nth-of-type(3) p:nth-of-type(4) {
+    font-size: .9em;
+    color: var(--sec-txt-color);
+    padding: 1em 0 0;
+    margin: 0;
+}
+
+/****************/
+/* OMSCHRIJVING */
+/****************/
+
+section:nth-of-type(4) {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1em;
+    padding: 1em;
+}
+
+section:nth-of-type(4) button {
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--main-bg-color);
+    border-width: 0;
+    text-align: left;
+    padding: 0;
+    text-decoration: underline;
+}
+
+/********************/
+/* EXTRA INFORMATIE */
+/********************/
+
+section:nth-of-type(5) details:nth-of-type(1) summary,
+section:nth-of-type(5) details:nth-of-type(2) summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.2rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+section:nth-of-type(5) details:nth-of-type(1) summary::after,
+section:nth-of-type(5) details:nth-of-type(2) summary::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+section:nth-of-type(5) details:nth-of-type(1),
+section:nth-of-type(5) details:nth-of-type(2){
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1em;
+}
+
+section:nth-of-type(5) details:nth-of-type(2) p{
+    margin: 1em;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.2rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) summary::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) img {
+    height: 2rem;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) ul {
+    list-style: none;
+    padding: 0 1em;
+    font-family: Helvetica, arial, sans-serif;
+    margin: 0;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) li h3 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+    margin: 1em;
+}
+
+
+section:nth-of-type(5) details:nth-of-type(3) li img {
+    height: 2rem;
+    padding: 0;
+}
+
+/**************************/
+/* HOE ANDEREN HET DRAGEN */
+/**************************/
+
+
+section:nth-of-type(6) {
+    padding: 1em;
+}
+
+section:nth-of-type(6) h2 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+section:nth-of-type(6) p {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+section:nth-of-type(6) button {
+    font-size: 1em; 
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--sec-bg-color);
+    border-radius: 100px;
+    padding: .5em 1.5em .5em;
+    margin: 1em 0 0 0;
+}
+
+section:nth-of-type(6) button:hover {
+    border-color: var(--main-txt-color);
+}
+
+/*******************/
+/* MAAK DE LOOK AF */
+/*******************/
+
+/*************************/
+/* ONTDEK MEER CARROUSEL */
+/*************************/
+
+section:nth-of-type(7) h2 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(7) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(7) li {
+    position: relative; 
+    padding: .5em;
+}
+
+section:nth-of-type(7) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(7) li img {
+    height: 25rem;
+}
+
+section:nth-of-type(7) li h3 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--main-txt-color);
+    font-weight: normal;
+
+    position: absolute; 
+    bottom: 2em; 
+    left: 3em; 
+
+    background-color: var(--main-bg-color);
+    border-radius: 2em;
+    padding: 0.5em 1em 0.5em;
+}
+
+section:nth-of-type(7) h3:hover {
+    background-color: var(--trd-bg-color);
+}
+
+/*********************************/
+/* MISSCHIEN VIND JE DIT OOK LEUK*/
+/*********************************/
+section:nth-of-type(8) {
+    font-family: Helvetica, arial, sans-serif;
+}
+
+section:nth-of-type(8) h2 {
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(8) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(8) li {
+    padding: .5em;
+}
+
+section:nth-of-type(8) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(8) img {
+    height: 20rem;
+}
+
+section:nth-of-type(8) h3 {
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(8) h4 {
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(8) p:nth-of-type(1) {
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .1rem 0rem;
+}
+
+section:nth-of-type(8) p:nth-of-type(2) {
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    text-decoration: line-through;
+    margin: .1rem 0rem;
+}
+
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer details summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .9rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+footer summary::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+footer details ul{
+    list-style: none;
+    padding: 0 1em 0;
+}
+
+footer details li{
+    padding: .5em 0em;
+}
+
+footer details  a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+/* Taal knop */
+
+footer button {
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+    background: none;
+    
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    width: 95vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+footer button::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('https://cdn-icons-png.flaticon.com/512/61/61027.png') no-repeat center center;
+    background-size: cover; 
+    margin-right: 8px; 
+}
+
+footer p {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    padding: 1.5rem 0 0 0 ;
+    margin: 0 1em 0 1em;
+}
+footer ul{
+    list-style: none;
+    padding: 0 0 0;
+    margin: 1em;
+}
+    
+footer ul a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+footer ul li {
+    padding: 1rem 0 0 0;
+}

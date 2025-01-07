@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage van de Nike website.">
+    <title>Standaard HTML-pagina</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styleProductPagina.css">
+</head>
+<body>
+
+    <header>
+        <a href="#"><img src="images/icons/nike.png" alt="Nike logo"></a>
+        
+        <ul>
+            <a href="#"><img src="images/icons/search.png" alt="Zoeken"></a>
+            <a href="#"><img src="images/icons/user.png" alt="Account"></a>
+            <a href="#"><img src="images/icons/shopping.png" alt="Winkelmand"></a>
+            <button><img src="images/icons/menu.png" alt="Menu" /></button>
+        </ul>
+
+    </header>
+    
+    <main>
+    
+        <!-- Product -->
+
+    <section>
+        <h1>Nike Air Max Plus III</h1>
+        <p>Herenschoenen</p>
+        <p>€ 189,99</p>
+    </section>
+    
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto1.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto4.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto5.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto6.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/productpage/productFoto7.png" style="width:100%">
+    </div>
+  
+    </div>
+  
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <!-- Maat selectie -->
+
+    <section>
+        <h2>Selecteer maat</h2>
+        <a href="#">Maatwijzer</a>        
+        <ul>
+            <li><button>EU 35.5</button></li>
+            <li><button>EU 36</button></li>
+            <li><button>EU 36.5</button></li>
+            <li><button>EU 37</button></li>
+            <li><button>EU 37.5</button></li>
+            <li><button>EU 38</button></li>
+            <li><button>EU 38.5</button></li>
+            <li><button>EU 39</button></li>
+            <li><button>EU 40</button></li>
+            <li><button>EU 40,5</button></li>
+            <li><button>EU 41</button></li>
+            <li><button>EU 42</button></li>
+            <li><button>EU 42.5</button></li>
+            <li><button>EU 43</button></li>
+            <li><button>EU 44</button></li>
+            <li><button>EU 44,5</button></li>
+            <li><button>EU 45</button></li>
+            <li><button>EU 45,5</button></li>
+            <li><button>EU 46</button></li>
+            <li><button>EU 47</button></li>
+            <li><button>EU 47.5</button></li>
+            <li><button>EU 48.5</button></li>
+            <li><button>EU 49.5</button></li>
+        </ul>
+        <p>Valt klein; we raden je aan een halve maat groter te bestellen</p>
+    </section>
+    
+    <!-- Winkelmand knoppen -->
+
+    <section>
+        <p>Klarna Beschikbaar bij het afrekenen.</p>
+        <button>Voeg toe aan winkelmandje</button>
+        <button>Markeer als favoriet</button>
+        <p>Dit product komt niet in aanmerking voor promoties en kortingen op de site.</p>
+        <p>Gratis ophalen</p>
+        <button>Zoek een store</button>
+        <p>Click & Collect kan worden gekozen bij het afrekenen</p>
+    </section>
+
+    <!-- Omschrijving -->
+
+    <section>
+        <p>
+            De Nike Air Max Plus III combineert supercomfortabele Tuned Air technologie 
+            met een energiek design dat beroemd is geworden door zijn voorgangers. 
+            De III heeft een vernieuwde look dankzij TPU-accenten in het bovenwerk. 
+            Tegelijkertijd zijn de iconische vervagende kleuren behouden.
+        </p>
+        <ul>
+            <li>Weergegeven kleur: Zwart/Zwart/Wolf Grey</li>
+            <li>Stijl: CJ9684-002</li>
+        </ul>
+        <button>Bekijk productgegevens</button>
+    </section>
+
+    <!-- Extra informatie -->
+
+    <section>
+        <details>
+            <summary>Maat en pasvorm</summary>
+            <ul>
+                <li>Valt klein; we raden je aan een halve maat groter te bestellen</li>
+                <li><a href="#">Maatwijzer</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Gratis verzending en retourneren</summary>
+            <p>Gratis standaardverzending met je Nike Membership.</p>
+            <ul>
+                <li>Je kunt je bestelling gratis binnen 30 dagen retourneren <a href="#">(er zijn uitzonderingen van toepassing)</a>.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Beoordelingen (79)</summary>
+            <img src="images/icons/star.png" alt="Star rating">
+            <ul>
+                <li>
+                    <h3>Een top product.</h3>
+                    <img src="images/icons/star.png" alt="Star rating">
+                    <p>GertaR504432930 - 26 dec 2024</p>
+                    <p>Geweldig product met een perfecte pasvorm! I love it🥰😍 Ik had een zwart/grijs exemplaar. Heel mooi.</p>
+                </li>
+                <li>
+                    <h3></h3>
+                    <img src="images/icons/star.png" alt="Star rating">
+                    <p>AnahidK351091137 - 15 dec 2024</p>
+                    <p>Väldigt bekväm och skön skor. Storleken stämmer.</p>
+                </li>
+                <li>
+                    <h3>Bellissima</h3>
+                    <img src="images/icons/star.png" alt="Star rating">
+                    <p>AnahidK351091137 - 15 dec 2024</p>
+                    <p>Scapra bellissima e comoda tessuto morbido e robusto consiglio una mezza taglia in più..</p>
+                </li>
+            </ul>
+            <button>Meer beoordelingen</button>
+        </details>
+    </section>
+
+    <!-- Foto delen / uploaden -->
+
+    <section>
+        <h2>Hoe anderen het dragen</h2>
+        <p>Upload je foto of vermeld @Nike op Instagram om kans te maken te worden uitgelicht.</p>
+        <button>Upload Je Foto</button>
+    </section>
+
+    <!-- Maak de look af -->
+
+    <section>
+        <h2>Ontdek meer</h2>
+        <ul>
+            <li>
+                <a href="#">
+                <img src="images/homepage/ontdekmeerDames.jpg" alt="Shop voor Dameskleding">
+                <h3> Dames </h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="images/homepage/ontdekmeerHeren.jpg" alt="Shop voor Herenkleding">
+                <h3> Heren </h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="images/homepage/ontdekmeerKids.jpg" alt="Shop voor Kinderkleding">
+                <h3> Kids </h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="images/homepage/ontdekmeerTeens.jpg" alt="Shop voor Tienerkleding">
+                <h3> Teens </h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Misschien vind je dit ook leuk -->
+
+    <section>
+        <h2>Misschien vind je dit ook leuk</h2>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingNikeDunkLowPremium.png" alt="Nike Dunk Low Premium, Damesschoenen">
+                    <h3> Nike Dunk Low Premium </h3>
+                    <h4> Damesschoenen </h4>
+                    <p>€ 77,99</p>
+                    <p>€ 129,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingAirJordan1Mid2.png" alt="Air Jordan 1 Mid, Herenschoenen">
+                    <h3> Air Jordan 1 Mid </h3>
+                    <h4> Herenschoenen </h4>
+                    <p>€ 97,99</p>
+                    <p>€ 139,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingNikeV2Krun.png" alt="Nike V2K Run, Damesschoenen">
+                    <h3> Nike V2K Run </h3>
+                    <h4> Damesschoenen </h4>
+                    <p>€ 71,99</p>
+                    <p>€ 119,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingAirJordan1Mid.png" alt="Air Jordan 1 Mid, Damesschoenen">
+                    <h3> Air Jordan 1 Mid </h3>
+                    <h4> Damesschoenen </h4>
+                    <p>€ 97,99</p>
+                    <p>€ 139,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingAirMaxPlusDrift.png" alt="Nike Air Max Plus Drift, Herenschoenen">
+                    <h3> Nike Air Max Plus Drift </h3>
+                    <h4> Herenschoenen </h4>
+                    <p>€ 159,99</p>
+                    <p>€ 199,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingAirForce107.png" alt="Nike Air Force 1 '07, Herenschoenen">
+                    <h3> Nike Air Force 1 '07 </h3>
+                    <h4> Herenschoenen </h4>
+                    <p>€ 119,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingNikeAirMaxPlusUtility.png" alt="Nike Air Max Plus Utility, Herenschoenen">
+                    <h3> Nike Air Max Plus Utility </h3>
+                    <h4> Herenschoenen </h4>
+                    <p>€ 199,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingNikeSportswearClassicPuffer.png" alt="Nike Sportswear Classic Puffer, Therma-FIT ruimvallend damesjack met capuchon">
+                    <h3> Nike Sportswear Classic Puffer </h3>
+                    <h4> Therma-FIT ruimvallend damesjack met capuchon </h4>
+                    <p>€ 129,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingWindrunnerPrimaLoft.png" alt="Nike Windrunner PrimaLoft®, Storm-FIT Gewatteerd herenjack met capuchon">
+                    <h3> Nike Windrunner PrimaLoft® </h3>
+                    <h4> Storm-FIT Gewatteerd herenjack met capuchon </h4>
+                    <p>€ 229,99</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/homepage/kortingAirForce1Shadow.png" alt="Nike Air Force 1 Shadow, Damesschoenen">
+                    <h3> Nike Air Force 1 Shadow </h3>
+                    <h4> Damesschoenen </h4>
+                    <p>€ 129,99</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    
+    <footer>
+        <details>
+            <summary>Bronnen</summary>
+            <ul>
+                <li><a href="#">Cadeaubonnen</a></li>
+                <li><a href="#">Zakelijke cadeaubonnen</a></li>
+                <li><a href="#">Zoek een store</a></li>
+                <li><a href="#">Nike Journal</a></li>
+                <li><a href="#">Word member</a></li>
+                <li><a href="#">Studentenkorting</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Promotiecodes</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Help</summary>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Bestelstatus</a></li>
+                <li><a href="#">Verzending en levering</a></li>
+                <li><a href="#">Retourzendingen</a></li>
+                <li><a href="#">Betaalmethodes</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Nike promotiecodes hulp</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary>Bedrijf</summary>
+            <ul>
+                <li><a href="#">Over Nike</a></li>
+                <li><a href="#">Nieuws</a></li>
+                <li><a href="#">Werken bij Nike</a></li>
+                <li><a href="#">Investeerders</a></li>
+                <li><a href="#">Duurzaamheid</a></li>
+                <li><a href="#">Missie</a></li>
+                <li><a href="#">Een Kwestie Melden</a></li>
+            </ul>
+        </details>
+        <button>Nederland</button>
+        <p>© 2025 Nike, Inc. Alle rechten voorbehouden</p>
+        <ul>
+            <li><a href="#">Handleidingen</a></li>
+            <li><a href="#">Gebruiksvoorwaarden</a></li>
+            <li><a href="#">Verkoopvoorwaarden</a></li>
+            <li><a href="#">Bedrijfsgegevens</a></li>
+            <li><a href="#">Privacy- en cookiebeleid</a></li>
+            <li><a href="#">Privacy en cookie-instellingen</a></li>
+        </ul>
+    </footer>
+</body>
+
+<script src="scripts/script.js"></script> 
+
+</html>
