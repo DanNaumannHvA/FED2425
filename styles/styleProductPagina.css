@@ -272,6 +272,7 @@ section:nth-of-type(3) button:nth-of-type(3) {
     text-align: left;
     padding: 0;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 section:nth-of-type(3) p:nth-of-type(4) {
@@ -299,6 +300,7 @@ section:nth-of-type(4) button {
     text-align: left;
     padding: 0;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /********************/
@@ -328,11 +330,18 @@ section:nth-of-type(5) details:nth-of-type(2) summary {
 section:nth-of-type(5) details:nth-of-type(1) summary::after,
 section:nth-of-type(5) details:nth-of-type(2) summary::after {
     content: '';
-    width: 10px;
-    height: 10px;
-    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat;
     background-size: cover;
     transition: 0.2s;
+}
+
+section:nth-of-type(5) details[open]:nth-of-type(1) > summary::after,
+section:nth-of-type(5) details[open]:nth-of-type(2) > summary::after,
+section:nth-of-type(5) details[open]:nth-of-type(3) > summary::after
+{
+  transform: rotate(180deg);
 }
 
 section:nth-of-type(5) details:nth-of-type(1),
@@ -344,6 +353,19 @@ section:nth-of-type(5) details:nth-of-type(2){
 section:nth-of-type(5) details:nth-of-type(2) p{
     margin: 1em;
 }
+
+section:nth-of-type(5) details:nth-of-type(1) a,
+section:nth-of-type(5) details:nth-of-type(2) a{
+    color: var(--main-txt-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section:nth-of-type(5) details:nth-of-type(2) p{
+    margin: 1em;
+}
+
+/* REVIEWS */
 
 section:nth-of-type(5) details:nth-of-type(3) summary {
     list-style: none;
@@ -366,15 +388,16 @@ section:nth-of-type(5) details:nth-of-type(3) summary {
 
 section:nth-of-type(5) details:nth-of-type(3) summary::after {
     content: '';
-    width: 10px;
-    height: 10px;
-    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat;
     background-size: cover;
     transition: 0.2s;
 }
 
-section:nth-of-type(5) details:nth-of-type(3) img {
-    height: 2rem;
+section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
+    height: 1.5rem;
+    margin: 1em;
 }
 
 section:nth-of-type(5) details:nth-of-type(3) ul {
@@ -384,19 +407,49 @@ section:nth-of-type(5) details:nth-of-type(3) ul {
     margin: 0;
 }
 
+section:nth-of-type(5) details:nth-of-type(3) li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 section:nth-of-type(5) details:nth-of-type(3) li h3 {
     font-family: Helvetica, arial, sans-serif;
     font-size: 1rem;
     color: var(--main-txt-color);
     font-weight: 580;
-    margin: 1em;
+    width: 100vw;
 }
-
 
 section:nth-of-type(5) details:nth-of-type(3) li img {
-    height: 2rem;
     padding: 0;
+    height: 1.5rem;
 }
+
+section:nth-of-type(5) details:nth-of-type(3) li p:nth-of-type(1) {
+    font-size: .9rem;
+    color: var(--sec-txt-color);
+}
+
+section:nth-of-type(5) details:nth-of-type(3) li p:nth-of-type(2) {
+    font-size: 1em;
+    color: var(--sec-txt-color);
+}
+
+section:nth-of-type(5) details:nth-of-type(3) button {
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--main-bg-color);
+    border-width: 0;
+    text-align: left;
+    padding: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 
 /**************************/
 /* HOE ANDEREN HET DRAGEN */
@@ -438,10 +491,6 @@ section:nth-of-type(6) button:hover {
 /*******************/
 /* MAAK DE LOOK AF */
 /*******************/
-
-/*************************/
-/* ONTDEK MEER CARROUSEL */
-/*************************/
 
 section:nth-of-type(7) h2 {
 	font-family: Helvetica, arial, sans-serif;
@@ -572,11 +621,15 @@ footer details summary{
 
 footer summary::after {
     content: '';
-    width: 10px;
-    height: 10px;
-    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat;
     background-size: cover;
     transition: 0.2s;
+}
+
+footer details[open] > summary::after {
+  transform: rotate(180deg);
 }
 
 footer details ul{
@@ -627,7 +680,7 @@ footer button::before {
     display: inline-block;
     width: 16px; 
     height: 16px; 
-    background: url('https://cdn-icons-png.flaticon.com/512/61/61027.png') no-repeat center center;
+    background: url('../images/icons/globe.png') no-repeat center center;
     background-size: cover; 
     margin-right: 8px; 
 }

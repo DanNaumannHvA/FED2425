@@ -21,6 +21,8 @@
 
     --button-bg-color: #000000;
     --button-txt-color: #ffffff;
+
+    
 }
 
 @font-face {
@@ -482,12 +484,16 @@ footer details summary{
 
 footer summary::after {
     content: '';
-    width: 10px;
-    height: 10px;
-    background: url('https://cdn-icons-png.flaticon.com/512/54/54785.png') no-repeat;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat;
     background-size: cover;
     transition: 0.2s;
 }
+
+footer details[open] > summary::after {
+    transform: rotate(180deg);
+  }
 
 footer details ul{
     list-style: none;
@@ -529,7 +535,7 @@ footer button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
+    cursor: pointer; 
 }
 
 footer button::before {
@@ -537,9 +543,15 @@ footer button::before {
     display: inline-block;
     width: 16px; 
     height: 16px; 
-    background: url('https://cdn-icons-png.flaticon.com/512/61/61027.png') no-repeat center center;
+    background: url('../images/icons/globe.png') no-repeat center center;
     background-size: cover; 
-    margin-right: 8px; 
+    margin-right: 8px;
+}
+
+footer form{
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    margin: 1em;
 }
 
 footer p {
