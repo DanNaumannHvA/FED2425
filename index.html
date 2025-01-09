@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Homepage van de Nike website.">
-    <title>Standaard HTML-pagina</title>
+    <title>Nike homepage</title>
+    <link rel="icon" type="image/x-icon" href="../FED2425/images/icon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
@@ -395,9 +396,10 @@
         <button>Nederland</button>
 
         <form>
-            <input type="checkbox" value="auto"><label>Auto</label>
-            <input type="checkbox"value="dark"><label>Dark Mode</label>
-            <input type="checkbox"value="light"><label>Light Mode</label>
+                <legend>Dark/light mode</legend>
+                <label><input type="radio" value="auto" name="theme" checked>Auto</label>
+                <label><input type="radio" value="dark" name="theme">Dark Mode</label>
+                <label><input type="radio" value="light" name="theme">Light Mode</label>
         </form>
 
         <p>© 2025 Nike, Inc. Alle rechten voorbehouden</p>
