@@ -1,0 +1,714 @@
+/* Simpele CSS Remedy */
+/* naar een idee van Jen Simmons */
+/* github.com/jensimmons/cssremedy */
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+
+    color-scheme:light dark;
+
+    --main-txt-color: light-dark(#000000, #ffffff);
+    --sec-txt-color: light-dark(#707070, #B0B0B0);
+    --trd-text-color: light-dark(#9E3501, #FFA500);
+    --pic-text-color: light-dark(#ffffff, #ffffff);
+
+    --main-bg-color: light-dark(#ffffff, #000000);
+    --sec-bg-color: light-dark(#F5F5F5, #1A1A1A);
+    --trd-bg-color: light-dark(#CACACB, #2D2D2E);
+
+    --button-bg-color: light-dark(#000000,#ffffff);
+    --button-txt-color: light-dark(#ffffff,#000000);
+}
+
+@font-face {
+	font-family: titelsFutura;
+	src: url(FuturaBoldfont.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+/*******************/
+/* LIGHT/DARK MODE */
+/*******************/
+
+/* Auto Mode */
+:root:has([value="auto"]:checked) {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has([value="auto"]:checked) header > a > img {
+        content: url(../images/icons/darkMode/NikeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(1) > img {
+        content: url(../images/icons/darkMode/searchDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(2) > img {
+        content: url(../images/icons/darkMode/userDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(3) > img {
+        content: url(../images/icons/darkMode/shoppingDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > button > img {
+        content: url(../images/icons/darkMode/menuDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer button::before {
+        background-image: url(../images/icons/darkMode/globeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer form legend::before {
+        background-image: url(../images/icons/darkMode/light.png);
+    }
+
+    :root:has([value="auto"]:checked) footer details::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+
+}
+
+/* Light Mode */
+:root:has([value="light"]:checked) {
+    color-scheme: light;
+}
+
+:root:has([value="light"]:checked) header > a > img {
+    content: url(../images/icons/Nike.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/search.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/user.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/shopping.png);
+}
+
+:root:has([value="light"]:checked) header > ul > button > img {
+    content: url(../images/icons/menu.png);
+}
+
+:root:has([value="light"]:checked) footer button::before {
+    background-image: url(../images/icons/globe.png);
+}
+
+:root:has([value="light"]:checked) footer form legend::before {
+    background-image: url(../images/icons/dark.png);
+}
+
+
+/* Dark Mode */
+:root:has([value="dark"]:checked) {
+    color-scheme: dark;
+}
+
+:root:has([value="dark"]:checked) header > a > img {
+    content: url(../images/icons/darkMode/NikeDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/darkMode/searchDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/darkMode/userDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/darkMode/shoppingDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > button > img {
+    content: url(../images/icons/darkMode/menuDark.png);
+}
+
+:root:has([value="dark"]:checked) footer button::before {
+    background-image: url(../images/icons/darkMode/globeDark.png);
+}
+
+:root:has([value="dark"]:checked) footer form legend::before {
+    background-image: url(../images/icons/darkMode/light.png);
+}
+
+/* Fonts en typografie bij elkaar, kan je ze weghalen bij individuele elementen. */
+
+/**********/
+/* HEADER */
+/**********/
+
+
+header h1 {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background: var(--main-bg-color);
+}
+
+header img:first-of-type {
+    width: auto; 
+    height: 1.3em; 
+    object-fit: contain;
+    margin-left: 1em; 
+}
+
+header img {
+    width: auto; 
+    height: 1.5em; 
+    object-fit: contain;
+    margin-right: 0.25em;
+}
+
+header > ul {
+    margin-left: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--main-bg-color);
+}
+
+/**********/
+/* BANNER */
+/**********/
+
+section:nth-of-type(1) article:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+    height: 35rem; 
+    overflow: hidden;
+}
+
+section:nth-of-type(1) article:nth-of-type(1) img {
+	height: 35rem;
+	width: auto;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/***********************/
+/* BANNER ONDERSCHRIFT */
+/***********************/
+
+section:nth-of-type(1) article:nth-of-type(2) {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) h2 {
+	font-family: titelsFutura;
+	text-transform: uppercase;
+	font-size: 3rem;
+    color: var(--main-txt-color);
+	margin: 1rem;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) p {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    padding: 1rem;
+	margin: 0;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) a {
+    background-color: var(--button-bg-color);
+    color: var(--button-txt-color);
+    font-family: Helvetica, arial, sans-serif;
+    text-decoration: none;
+
+
+    padding: .7rem;
+    border-radius: 3rem;
+    margin: .5rem;
+}
+
+/*********************/
+/* KORTING CARROUSEL */
+/*********************/
+
+section:nth-of-type(2) h2 {
+	font-family: titelsFutura;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	margin: 1rem;
+}
+
+section:nth-of-type(2) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(2) li {
+    padding: .5em;
+}
+
+section:nth-of-type(2) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(2) img {
+    height: 20rem;
+}
+
+section:nth-of-type(2) h3 {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(2) h4 {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    margin: .5rem 0rem;
+}
+
+section:nth-of-type(2) p:nth-of-type(1) {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--main-txt-color);
+    margin: .1rem 0rem;
+}
+
+section:nth-of-type(2) p:nth-of-type(2) {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1rem;
+    color: var(--sec-txt-color);
+    text-decoration: line-through;
+    margin: .1rem 0rem;
+
+}
+
+/*********************/
+/* NET UIT CARROUSEL */
+/*********************/
+
+section:nth-of-type(3) h2 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(3) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(3) li {
+    padding: .5em;
+}
+
+section:nth-of-type(3) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(3) img {
+    height: 30rem;
+}
+
+section:nth-of-type(3) h3 {
+    font-family: Helvetica, arial, sans-serif;
+	font-size: 1.2rem;
+    color: var(--main-txt-color);
+    margin: .5rem 0rem;
+    font-weight: normal;
+}
+
+/******************************/
+/* SHOP ONZE ICONEN CARROUSEL */
+/******************************/
+
+section:nth-of-type(4) h2 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(4) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(4) li {
+    position: relative; 
+    padding: .5em;
+}
+
+section:nth-of-type(4) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(4) li img {
+    height: 19.5rem;
+}
+
+section:nth-of-type(4) li h3 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--main-txt-color);
+    font-weight: normal;
+
+    position: absolute; 
+    bottom: 2em; 
+    left: 3em; 
+
+    background-color: var(--main-bg-color);
+    border-radius: 2em;
+    padding: 0.5em 1em 0.5em;
+}
+
+section:nth-of-type(4) h3:hover {
+    background-color: var(--trd-bg-color);
+}
+
+/*************************/
+/* ONTDEK MEER CARROUSEL */
+/*************************/
+
+section:nth-of-type(5) h2 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(5) ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(5) li {
+    position: relative; 
+    padding: .5em;
+}
+
+section:nth-of-type(5) li a {
+    text-decoration: none;
+}
+
+section:nth-of-type(5) li img {
+    height: 25rem;
+}
+
+section:nth-of-type(5) li h3 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--main-txt-color);
+    font-weight: normal;
+
+    position: absolute; 
+    bottom: 2em; 
+    left: 3em; 
+
+    background-color: var(--main-bg-color);
+    border-radius: 2em;
+    padding: 0.5em 1em 0.5em;
+}
+
+section:nth-of-type(5) h3:hover {
+    background-color: var(--trd-bg-color);
+}
+
+/*****************************/
+/* NIKE MEMBERSHIP CARROUSEL */
+/*****************************/
+
+section:nth-of-type(6) h2 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 1.5rem;
+	margin: 1rem;
+    font-weight: normal;
+}
+
+section:nth-of-type(6) ul {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    list-style-type: none;
+    padding: 0;
+}
+
+section:nth-of-type(6) li {
+    padding: .5em;
+    height: 22rem;
+}
+
+section:nth-of-type(6) li a {
+    text-decoration: none;
+    display: grid;
+    width: 19.5rem;
+    height: 19.5rem;
+
+
+    grid-template-columns: 75% auto;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+section:nth-of-type(6) li img {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 5;
+
+    width: 19.5rem;
+    height: 19.5rem;
+}
+
+section:nth-of-type(6) h4 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.4rem;
+    color: var(--pic-text-color);
+    font-weight: normal;
+    padding: .5em;
+    margin: 0;
+    align-self: end;
+
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1; 
+}
+
+section:nth-of-type(6) h3 {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--pic-text-color);
+    font-weight: normal;
+    padding: .5em;
+    margin: 0;
+    align-self: end;
+
+
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+section:nth-of-type(6) li p {
+    display: inline-block; 
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1rem;
+    color: var(--main-txt-color);
+    font-weight: normal;
+
+    background-color: var(--main-bg-color);
+    border-radius: 2em;
+    padding: 0.5em 1em 0.5em;
+    margin: 0.5em;
+
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+
+    justify-self: start; 
+    align-self: center; 
+
+}
+
+section:nth-of-type(6) p:hover {
+    background-color: var(--trd-bg-color);
+}
+
+/***********/
+/* SITEMAP */
+/***********/
+
+section:nth-of-type(7) details{
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.2rem;
+    color: var(--main-text-color);
+    font-weight: normal;
+    padding: .8em .5em ;
+}
+
+section:nth-of-type(7) summary{
+    list-style: none;
+}
+
+section:nth-of-type(7) ul{
+    list-style: none;
+}
+
+section:nth-of-type(7) li{
+    padding: .5em 0em;
+}
+
+section:nth-of-type(7) a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .9rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer details summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .9rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+footer summary::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+footer details[open] > summary::after {
+    transform: rotate(180deg);
+  }
+
+footer details ul{
+    list-style: none;
+    padding: 0 1em 0;
+}
+
+footer details li{
+    padding: .5em 0em;
+}
+
+footer details  a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+/* Taal knop */
+
+footer button {
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+    background: none;
+    
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    width: 95vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer; 
+}
+
+footer button::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/globe.png') no-repeat center center;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
+/* Dark mode */
+
+footer form legend{
+    padding-bottom: 1em;
+    align-items: center;
+    display: flex;
+}
+
+footer form legend::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/dark.png') no-repeat center center;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
+footer form {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    margin: 1em;
+}
+
+footer p {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    padding: 1.5rem 0 0 0 ;
+    margin: 0 1em 0 1em;
+}
+footer ul{
+    list-style: none;
+    padding: 0 0 0;
+    margin: 1em;
+}
+    
+footer ul a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+footer ul li {
+    padding: 1rem 0 0 0;
+}
