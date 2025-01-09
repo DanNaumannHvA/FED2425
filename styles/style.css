@@ -10,19 +10,20 @@
 /*********************/
 
 :root {
-    --main-txt-color: #000000;
-    --sec-txt-color: #707070;
-    --trd-text-color: #9E3501;
-    --pic-text-color: #ffffff;
 
-    --main-bg-color: #ffffff;
-    --sec-bg-color: #F5F5F5;
-    --trd-bg-color: #CACACB;
+    color-scheme:light dark;
 
-    --button-bg-color: #000000;
-    --button-txt-color: #ffffff;
+    --main-txt-color: light-dark(#000000, #ffffff);
+    --sec-txt-color: light-dark(#707070, #B0B0B0);
+    --trd-text-color: light-dark(#9E3501, #FFA500);
+    --pic-text-color: light-dark(#ffffff, #ffffff);
 
-    
+    --main-bg-color: light-dark(#ffffff, #000000);
+    --sec-bg-color: light-dark(#F5F5F5, #1A1A1A);
+    --trd-bg-color: light-dark(#CACACB, #2D2D2E);
+
+    --button-bg-color: light-dark(#000000,#ffffff);
+    --button-txt-color: light-dark(#ffffff,#000000);
 }
 
 @font-face {
@@ -32,6 +33,113 @@
 
 body {
     margin: 0;
+}
+
+/*******************/
+/* LIGHT/DARK MODE */
+/*******************/
+
+/* Auto Mode */
+:root:has([value="auto"]:checked) {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has([value="auto"]:checked) header > a > img {
+        content: url(../images/icons/darkMode/NikeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(1) > img {
+        content: url(../images/icons/darkMode/searchDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(2) > img {
+        content: url(../images/icons/darkMode/userDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(3) > img {
+        content: url(../images/icons/darkMode/shoppingDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > button > img {
+        content: url(../images/icons/darkMode/menuDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer button::before {
+        background-image: url(../images/icons/darkMode/globeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer form legend::before {
+        background-image: url(../images/icons/darkMode/light.png);
+    }
+
+}
+
+/* Light Mode */
+:root:has([value="light"]:checked) {
+    color-scheme: light;
+}
+
+:root:has([value="light"]:checked) header > a > img {
+    content: url(../images/icons/Nike.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/search.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/user.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/shopping.png);
+}
+
+:root:has([value="light"]:checked) header > ul > button > img {
+    content: url(../images/icons/menu.png);
+}
+
+:root:has([value="light"]:checked) footer button::before {
+    background-image: url(../images/icons/globe.png);
+}
+
+:root:has([value="light"]:checked) footer form legend::before {
+    background-image: url(../images/icons/dark.png);
+}
+
+
+/* Dark Mode */
+:root:has([value="dark"]:checked) {
+    color-scheme: dark;
+}
+
+:root:has([value="dark"]:checked) header > a > img {
+    content: url(../images/icons/darkMode/NikeDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/darkMode/searchDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/darkMode/userDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/darkMode/shoppingDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > button > img {
+    content: url(../images/icons/darkMode/menuDark.png);
+}
+
+:root:has([value="dark"]:checked) footer button::before {
+    background-image: url(../images/icons/darkMode/globeDark.png);
+}
+
+:root:has([value="dark"]:checked) footer form legend::before {
+    background-image: url(../images/icons/darkMode/light.png);
 }
 
 /**********/
@@ -72,7 +180,6 @@ header button {
     border: none;
     background-color: var(--main-bg-color);
 }
-
 
 /**********/
 /* BANNER */
@@ -545,10 +652,28 @@ footer button::before {
     height: 16px; 
     background: url('../images/icons/globe.png') no-repeat center center;
     background-size: cover; 
-    margin-right: 8px;
+    margin-right: 1em;
 }
 
-footer form{
+/* Dark mode */
+
+footer form legend{
+    padding-bottom: 1em;
+    align-items: center;
+    display: flex;
+}
+
+footer form legend::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/dark.png') no-repeat center center;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
+footer form {
     font-family: Helvetica, arial, sans-serif;
     font-size: .8rem;
     margin: 1em;

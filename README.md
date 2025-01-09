@@ -88,26 +88,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  De HTML van de eerste pagina is in principe klaar. Voor de verschillende 
+  onderdelen was er soms verwarring met welke h's just waren om te gebruiken
+  en de footer was nog niet af.
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Zijn de h's goed en is de structuur zo logisch? Wat kan er nog meer aanverbeterd worden?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - HTML  ziet er goed uit
+  - h's veraanderen > h1 naar hidden veranderen
 
 </details>
 
@@ -121,26 +113,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Moeizaam begin, de header responsiveness is moeilijk om te bevatten omdat de 
+  verschillende delen verdwijnen en tevoorschijn komen. Ben niet heel ver gekomen
+  hierdoor waardoor er niet veel CSS is.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Hoe kan ik zorgen dat deze onderdelen juist tevoorschijn komen? Is dit te moeilijk? 
+  Is het nog mogelijk om te switchen in dat geval? 
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Focus op mobile first, de rest komt later wel.
+  - Footer delen kunnen door middel van details worden gemaakt.
+  - Meer tempo erin zetten.
 
 </details>
 
@@ -168,17 +156,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Over het algemeen ging het uiteindelijk heel goed. Toen ik ging focussen op de mobiele 
+  versie was het makkelijker om te focussen. Het lukte me om de horizontale scroll 
+  gallerijen in elkaar te zetten en ik heb geleerd hoe ik de details kon stijlen. 
+  Ook lukte het me om  dark mode werkende te krijgen, ookal moet ik wel veel proberen/
+  troubleshooten om de dark/light op auto/systems preferences werkende te krijgen. Code 
+  is op sommige plekken wel heel lang, pas bij de productpagina word het iets compacter.
+  Op dit moment had ik pas meer zelfverzekerdheid om te experimenteren.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Wat moet er nog gedaan worden? Is de slideshow en menu genoeg voor micro interactie? 
+  Moet de code netter? (dubbele dingen weg) z
 
 
   ### Verslag van meeting
@@ -229,8 +218,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  2. https://css-tricks.com/snippets/css/complete-guide-grid/
+  3. https://www.w3schools.com/css/css3_buttons.asp
+  4. https://www.w3schools.com/cssref/pr_font_weight.php
+  5. https://www.w3schools.com/css/css_link.asp
+  6. https://www.w3schools.com/cssref/css_selectors.php
+  7. https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+  8. https://www.w3schools.com/css/css_align.asp
+  9. https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+  10. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+  11. https://www.w3schools.com/howto/howto_js_slideshow.asp
+  12. https://www.sitepoint.com/style-html-details-element/
+  13. https://www.w3schools.com/css/css_padding.asp
+  14. 
+  15. 
+  16. 
+  17.
+  18.
+  19.
+  20.
+  21.
+  22.
+  23.
+  24.
+  25.
+  26.
+  27.
+  28.
+  29.
+  30.
 
 </details>
