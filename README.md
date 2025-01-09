@@ -167,7 +167,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Agenda voor meeting
   Wat moet er nog gedaan worden? Is de slideshow en menu genoeg voor micro interactie? 
-  Moet de code netter? (dubbele dingen weg) z
+  Moet de code netter? (dubbele dingen weg)
 
 
   ### Verslag van meeting
