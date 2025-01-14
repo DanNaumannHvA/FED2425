@@ -112,14 +112,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  ### Homepage: 
+  <img src="readme-images/Nike-Homepage-breakdown.png" width="375px" alt="breakdown van de homepage">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  ### Productpage: 
+  <img src="readme-images/Nike-Productpage-breakdown.png" width="375px" alt="breakdown van de productpage">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+
+  ### Hamburgermenu: 
+  <img src="readme-images/Nike-HamburgerMenu.png" width="375px" alt="breakdown van hamburgermenu">
+
+  ### Maak de look af: 
+  <img src="readme-images/Nike-MaakDeLookAf.png" width="375px" alt="breakdown van maak de look af">
 
 </details>
 
