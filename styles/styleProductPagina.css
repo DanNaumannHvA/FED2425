@@ -1,79 +1,3 @@
-/* Simpele CSS Remedy */
-/* naar een idee van Jen Simmons */
-/* github.com/jensimmons/cssremedy */
-*, *::after, *::before {
-    box-sizing:border-box;
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-:root {
-    --main-txt-color: #000000;
-    --sec-txt-color: #707070;
-    --trd-text-color: #9E3501;
-    --pic-text-color: #ffffff;
-
-    --main-bg-color: #ffffff;
-    --sec-bg-color: #F5F5F5;
-    --trd-bg-color: #CACACB;
-
-    --button-bg-color: #000000;
-    --button-txt-color: #ffffff;
-}
-
-@font-face {
-	font-family: titelsFutura;
-	src: url(FuturaBoldfont.ttf);
-}
-
-body {
-    margin: 0;
-}
-
-/**********/
-/* HEADER */
-/**********/
-
-header {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    background: var(--main-bg-color);
-}
-
-header img:first-of-type {
-    width: auto; 
-    height: 1.3em; 
-    object-fit: contain;
-    margin-left: 1em; 
-}
-
-header img {
-    width: auto; 
-    height: 1.5em; 
-    object-fit: contain;
-    margin-right: 0.25em;
-}
-
-header > ul {
-    margin-left: auto;
-}
-
-header button {
-    border: none;
-    background-color: var(--main-bg-color);
-}
-
-/***************/
-/* BURGER MENU */
-/***************/
-
-nav {
-    display: none;
-}
-
 /***********/
 /* PRODUCT */
 /***********/
@@ -107,89 +31,157 @@ section:nth-of-type(1) p:nth-of-type(2) {
 /* SLIDESHOW */
 /*************/
 
-/* Slideshow container */
-.slideshow-container {
+/* Slideshow */
+section:nth-of-type(2) {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: .5rem;
-    width: .5rem;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-/***********/
-/* PRODUCT */
-/***********/
-
-section:nth-of-type(2) {
-    font-family: Helvetica, arial, sans-serif;
 }
 
-section:nth-of-type(2) h2 {
-	font-size: 1rem;
-	margin: 1rem;
+section:nth-of-type(2) p {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .9em;
+    font-weight: 580;
+    color: var(--main-txt-color);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--main-bg-color);
+    border-radius: 50em;
+}
+
+section:nth-of-type(2) p img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    margin: 0 0.5rem 0 0;
+}
+
+section:nth-of-type(2) > ul:first-of-type {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+section:nth-of-type(2) > ul:first-of-type li {
+    display: none;
+}
+
+section:nth-of-type(2) > ul:first-of-type li.active {
+    display: block;
+}
+
+section:nth-of-type(2) img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation dots */
+section:nth-of-type(2) > ul:last-of-type {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 5em;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+section:nth-of-type(2) > ul:last-of-type li {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--main-txt-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+section:nth-of-type(2) > ul:last-of-type li.active,
+section:nth-of-type(2) > ul:last-of-type li:hover {
+    background-color: var(--sec-txt-color);
+}
+
+/* Animation */
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/**********************/
+/* WINKELMAND KNOPPEN */
+/**********************/
+
+section:nth-of-type(3) form {
+    font-family: Helvetica, arial, sans-serif;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section:nth-of-type(3) form h2 {
+    font-size: 1rem;
+    margin: 0;
     font-weight: 580;
     color: var(--main-txt-color);
 }
 
-section:nth-of-type(2) a {
-	font-size: 1rem;
-	margin: 1rem;
+section:nth-of-type(3) form a {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    margin: 0;
     font-weight: normal;
     color: var(--main-txt-color);
     text-decoration: none;
 }
 
-section:nth-of-type(2) ul {
+section:nth-of-type(3) form a img {
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: contain;
+    margin: 0 0.5rem 0 0;
+}
+
+/* Maat knoppen */
+
+section:nth-of-type(3) form ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
     align-content: stretch;
-    padding: 1em;
+    padding: 1em 0;
     margin: 0;
-
+    width: 100%;
 }
 
-section:nth-of-type(2) li {
-    width: 15vw;
+section:nth-of-type(3) form li {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    padding: .1em;
+    padding: .2em;
+    min-width: 15%;
+    width: 25%;
 }
 
 
-section:nth-of-type(2) li button {
+section:nth-of-type(3) form li button {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -204,14 +196,15 @@ section:nth-of-type(2) li button {
     border-radius: 5px;
 }
 
-section:nth-of-type(2) li button:hover {
+section:nth-of-type(3) form li button:hover {
     border-color: var(--txt-bg-color);
 }
 
-section:nth-of-type(2) p {
+/* Maat onderschrift */
+
+section:nth-of-type(3) form p:nth-of-type(1) {
     font-size: .9rem;
     margin: 0;
-    padding: 0 0 0 1em;
     color: var(--sec-txt-color);
 }
 
@@ -219,19 +212,18 @@ section:nth-of-type(2) p {
 /* WINKELMAND KNOPPEN */
 /**********************/
 
-section:nth-of-type(3) {
-    font-family: Helvetica, arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+section:nth-of-type(3) form p:nth-of-type(2) {
+    text-align: center;
+    width: 100%;
 }
 
-section:nth-of-type(3) p:nth-of-type(1) {
-    font-size: 1em;
-    text-align: center; 
+section:nth-of-type(3) form p:nth-of-type(2) img{
+    height: 1em;
 }
 
-section:nth-of-type(3) button:nth-of-type(1) {
+/* Voeg toe knop */
+
+section:nth-of-type(3) form > button:nth-of-type(1) {
     font-size: 1em; 
     width: 100%;
     height: 4rem;
@@ -241,11 +233,13 @@ section:nth-of-type(3) button:nth-of-type(1) {
     border-radius: 100px;
 }
 
-section:nth-of-type(3) button:nth-of-type(1):hover {
+section:nth-of-type(3) form > button:nth-of-type(1):hover {
     background-color: var(--sec-txt-color);
 }
 
-section:nth-of-type(3) button:nth-of-type(2) {
+/* Favoriet knop */
+
+section:nth-of-type(3) form > button:nth-of-type(2) {
     font-size: 1em; 
     width: 100%;
     height: 4rem;
@@ -254,40 +248,56 @@ section:nth-of-type(3) button:nth-of-type(2) {
     border: 2px solid var(--sec-bg-color);
     border-radius: 100px;
     margin: 1em 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-section:nth-of-type(3) button:nth-of-type(2):hover {
+section:nth-of-type(3) form > button:nth-of-type(2) img {
+    width: 1.2em;
+    height: 1.2em;
+    margin: .5em;
+}
+
+section:nth-of-type(3) form > button:nth-of-type(2):hover {
     border-color: var(--main-txt-color);
 }
 
-section:nth-of-type(3) p:nth-of-type(2) {
-    font-size: .9em;
-    text-align: center; 
+/* Favoriet knop onderschrift */
+
+section:nth-of-type(3) form p:nth-of-type(3) {
+    text-align: center;
     color: var(--sec-txt-color);
+    padding: 1em;
+    font-size: 1em; 
+    margin: 0;
+
 }
 
-section:nth-of-type(3) p:nth-of-type(3) {
-    font-size: 1em;
+section:nth-of-type(3) form > p:nth-of-type(4) {
+    font-size: 1rem;
     font-weight: bold;
     color: var(--main-txt-color);
+    width: 100%;
+
 }
 
-section:nth-of-type(3) button:nth-of-type(3) {
+section:nth-of-type(3) form > button:nth-of-type(3) {
     font-size: 1em;
     font-weight: bold;
     background-color: var(--main-bg-color);
-    border-width: 0;
+    border-color: var(--main-txt-color);
+    border-width: 0 0 1px;
     text-align: left;
-    padding: 0;
-    text-decoration: underline;
+    padding: 0 0 .3em;
     cursor: pointer;
+    width: fit-content;
 }
 
-section:nth-of-type(3) p:nth-of-type(4) {
-    font-size: .9em;
+section:nth-of-type(3) form > p:nth-of-type(5) {
+    font-size: .9rem;
     color: var(--sec-txt-color);
-    padding: 1em 0 0;
-    margin: 0;
+    width: 100%;
 }
 
 /****************/
@@ -298,6 +308,10 @@ section:nth-of-type(4) {
     font-family: Helvetica, arial, sans-serif;
     font-size: 1em;
     padding: 1em;
+}
+
+section:nth-of-type(4) p {
+    margin: 0;
 }
 
 section:nth-of-type(4) button {
@@ -317,7 +331,6 @@ section:nth-of-type(4) button {
 
 section:nth-of-type(5) details:nth-of-type(1) summary,
 section:nth-of-type(5) details:nth-of-type(2) summary {
-    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -341,7 +354,7 @@ section:nth-of-type(5) details:nth-of-type(2) summary::after {
     width: 18px;
     height: 18px;
     background: url('../images/icons/down.png') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     transition: 0.2s;
 }
 
@@ -376,7 +389,6 @@ section:nth-of-type(5) details:nth-of-type(2) p{
 /* REVIEWS */
 
 section:nth-of-type(5) details:nth-of-type(3) summary {
-    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -394,18 +406,42 @@ section:nth-of-type(5) details:nth-of-type(3) summary {
     font-weight: 580;
 }
 
+section:nth-of-type(5) details:nth-of-type(3) summary img {
+    height: 1rem;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: .5em;
+}
+
 section:nth-of-type(5) details:nth-of-type(3) summary::after {
     content: '';
     width: 18px;
     height: 18px;
     background: url('../images/icons/down.png') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     transition: 0.2s;
 }
 
 section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
-    height: 1.5rem;
-    margin: 1em;
+    display: inline-block;
+    height: 1rem;
+    margin: 1em 0.5em 1em 1em;
+    vertical-align: middle;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type + p {
+    display: inline-block;
+    margin: 1em 1em 1em 0;
+    vertical-align: middle;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+section:nth-of-type(5) details:nth-of-type(3) a {
+    display: block;
+    font-family: Helvetica, arial, sans-serif;
+    color: var(--main-txt-color);
+    font-weight: bold;
+    margin: 0 1em 2em;
 }
 
 section:nth-of-type(5) details:nth-of-type(3) ul {
@@ -433,7 +469,7 @@ section:nth-of-type(5) details:nth-of-type(3) li h3 {
 
 section:nth-of-type(5) details:nth-of-type(3) li img {
     padding: 0;
-    height: 1.5rem;
+    height: 1rem;
 }
 
 section:nth-of-type(5) details:nth-of-type(3) li p:nth-of-type(1) {
@@ -501,54 +537,144 @@ section:nth-of-type(6) button:hover {
 /*******************/
 
 section:nth-of-type(7) h2 {
-	font-family: Helvetica, arial, sans-serif;
-	font-size: 1.5rem;
-	margin: 1rem;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem;
     font-weight: normal;
 }
 
 section:nth-of-type(7) ul {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     list-style-type: none;
+    height: 30rem;
     padding: 0;
 }
 
-section:nth-of-type(7) li {
-    position: relative; 
+section:nth-of-type(7) li > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    height: 30rem; 
+    width: 20rem; 
+    margin: 1em;
+    background-color: var(--sec-bg-color);
+    padding: 2rem;
+}
+
+section:nth-of-type(7) li > ul li {
+    display: flex;
+    align-items: flex-start;
+}
+
+section:nth-of-type(7) li > ul li a {
+    display: flex;
+    justify-content: center;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+    z-index: 2;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(2) {
+    grid-column: 3 / span 2;
+    grid-row: 1 /span 2;
+    align-self: start;
+    z-index: 2;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(3) {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    align-self: center;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(4) {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    align-self: center;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(5) {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    align-self: center;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(6) {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+    align-self: end;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(1) a img {
+    max-width: 85%;
+    height: 40%;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(2) a img {
+    max-width: 85%;
+    height: 40%;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(3) a img {
+    max-width: 65%;
+    height: 35%;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(4) a img {
+    max-width: 60%;
+    height: 25%;
+}
+
+section:nth-of-type(7) li > ul li:nth-of-type(5) a img {
+    max-width: 70%;
+    height: 25%;
+}
+
+
+section:nth-of-type(7) li > ul button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    background: var(--main-bg-color);
+    border: none;
     padding: .5em;
+    border-radius: 10em;
+    cursor: pointer;
+    margin: 1em;
 }
 
-section:nth-of-type(7) li a {
-    text-decoration: none;
+section:nth-of-type(7) li > ul button:hover {
+    background: var(--trd-bg-color);
 }
 
-section:nth-of-type(7) li img {
-    height: 25rem;
+section:nth-of-type(7) li > ul button img {
+    width: 1.5em;
+    margin: .5em;
 }
 
-section:nth-of-type(7) li h3 {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1rem;
-    color: var(--main-txt-color);
-    font-weight: normal;
-
-    position: absolute; 
-    bottom: 2em; 
-    left: 3em; 
-
-    background-color: var(--main-bg-color);
-    border-radius: 2em;
-    padding: 0.5em 1em 0.5em;
+section:nth-of-type(7) li > ul button p {
+    margin: 0;
+    display: none;
 }
 
-section:nth-of-type(7) h3:hover {
-    background-color: var(--trd-bg-color);
+section:nth-of-type(7) li > ul button:hover p {
+    margin: 0;
+    display: block;
+    padding-right: .5em;
 }
 
 /*********************************/
 /* MISSCHIEN VIND JE DIT OOK LEUK*/
 /*********************************/
+
 section:nth-of-type(8) {
     font-family: Helvetica, arial, sans-serif;
 }
@@ -603,120 +729,109 @@ section:nth-of-type(8) p:nth-of-type(2) {
     margin: .1rem 0rem;
 }
 
-
-/**********/
-/* FOOTER */
-/**********/
-
-footer details summary{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0em;
-    margin: 0 1em 0 1em;
-
-    border-width: 1px 0px 0px 0px;
-    border-style: solid;
-    border-color: var(--sec-bg-color);
-
-    text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .9rem;
-    color: var(--main-txt-color);
-    font-weight: 580;
+/* Auto Mode */
+@media (prefers-color-scheme: dark) {
+    :root:has([value="auto"]:checked) section:nth-of-type(2) p img {
+        content: url(../images/icons/darkMode/starsingleDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(3) form a img {
+        content: url(../images/icons/darkMode/sizeDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(3) form p:nth-of-type(2) img{
+        content: url(../images/icons/darkMode/klarnaDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(3) form > button:nth-of-type(2) img {
+        content: url(../images/icons/darkMode/heartDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary img {
+        content: url(../images/icons/darkMode/starDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
+        content: url(../images/icons/darkMode/starDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(3) li img {
+        content: url(../images/icons/darkMode/starDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(1) summary::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(2) summary::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+    :root:has([value="auto"]:checked) section:nth-of-type(7) li > ul button img {
+        content: url(../images/icons/darkMode/eyeDark.png);
+    }
 }
 
-footer summary::after {
-    content: '';
-    width: 18px;
-    height: 18px;
-    background: url('../images/icons/down.png') no-repeat;
-    background-size: cover;
-    transition: 0.2s;
+/* Light Mode */
+:root:has([value="light"]:checked) section:nth-of-type(2) p img {
+    content: url(../images/icons/starsingle.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(3) form a img {
+    content: url(../images/icons/size.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(3) form p:nth-of-type(2) img {
+    content: url(../images/icons/klarna.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(3) form > button:nth-of-type(2) img {
+    content: url(../images/icons/heart.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary img {
+    content: url(../images/icons/star.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
+    content: url(../images/icons/star.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(3) li img {
+    content: url(../images/icons/star.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(1) summary::after {
+    background-image: url(../images/icons/down.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(2) summary::after {
+    background-image: url(../images/icons/down.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary::after {
+    background-image: url(../images/icons/down.png);
+}
+:root:has([value="light"]:checked) section:nth-of-type(7) li > ul button img {
+    content: url(../images/icons/eye.png);
 }
 
-footer details[open] > summary::after {
-  transform: rotate(180deg);
+/* Dark Mode */
+:root:has([value="dark"]:checked) section:nth-of-type(2) p img {
+    content: url(../images/icons/darkMode/starsingleDark.png);
 }
-
-footer details ul{
-    list-style: none;
-    padding: 0 1em 0;
+:root:has([value="dark"]:checked) section:nth-of-type(3) form a img {
+    content: url(../images/icons/darkMode/sizeDark.png);
 }
-
-footer details li{
-    padding: .5em 0em;
+:root:has([value="dark"]:checked) section:nth-of-type(3) form p:nth-of-type(2) img{
+    content: url(../images/icons/darkMode/klarnaDark.png);
 }
-
-footer details  a{
-    text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
-    color: var(--sec-txt-color);
-    font-weight: 580;
+:root:has([value="dark"]:checked) section:nth-of-type(3) form > button:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/heartDark.png);
 }
-
-/* Taal knop */
-
-footer button {
-    text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
-    color: var(--main-txt-color);
-    font-weight: 580;
-    text-align: left;
-
-    border-width: 1px 0px 1px 0px;
-    border-style: solid;
-    border-color: var(--sec-bg-color);
-    background: none;
-    
-    padding: 1.5rem 0em;
-    margin: 0 1em 0 1em;
-
-    width: 95vw;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary img {
+    content: url(../images/icons/darkMode/starDark.png);
 }
-
-footer button::before {
-    content: '';
-    display: inline-block;
-    width: 16px; 
-    height: 16px; 
-    background: url('../images/icons/globe.png') no-repeat center center;
-    background-size: cover; 
-    margin-right: 8px; 
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
+    content: url(../images/icons/darkMode/starDark.png);
 }
-
-footer p {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
-    color: var(--sec-txt-color);
-    font-weight: 580;
-    text-align: left;
-
-    padding: 1.5rem 0 0 0 ;
-    margin: 0 1em 0 1em;
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(3) li img {
+    content: url(../images/icons/darkMode/starDark.png);
 }
-footer ul{
-    list-style: none;
-    padding: 0 0 0;
-    margin: 1em;
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(1) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
 }
-    
-footer ul a{
-    text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
-    color: var(--sec-txt-color);
-    font-weight: 580;
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(2) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
 }
-
-footer ul li {
-    padding: 1rem 0 0 0;
+:root:has([value="dark"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+:root:has([value="dark"]:checked) section:nth-of-type(7) li > ul button img {
+    content: url(../images/icons/darkMode/eyeDark.png);
 }

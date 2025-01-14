@@ -1,0 +1,594 @@
+/* Simpele CSS Remedy */
+/* naar een idee van Jen Simmons */
+/* github.com/jensimmons/cssremedy */
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+
+    color-scheme:light dark;
+
+    --main-txt-color: light-dark(#000000, #ffffff);
+    --sec-txt-color: light-dark(#707070, #B0B0B0);
+    --trd-text-color: light-dark(#9E3501, #FFA500);
+    --pic-text-color: light-dark(#ffffff, #ffffff);
+
+    --main-bg-color: light-dark(#ffffff, #000000);
+    --sec-bg-color: light-dark(#F5F5F5, #1A1A1A);
+    --trd-bg-color: light-dark(#CACACB, #2D2D2E);
+
+    --button-bg-color: light-dark(#000000,#ffffff);
+    --button-txt-color: light-dark(#ffffff,#000000);
+}
+
+@font-face {
+	font-family: titelsFutura;
+	src: url(../FuturaBoldfont.ttf);
+}
+
+body {
+    margin: 0;    
+    background: var(--main-bg-color);
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+header img:first-of-type {
+    width: auto; 
+    height: 1.3em; 
+    object-fit: contain;
+    margin-left: 1em; 
+}
+
+header img {
+    width: auto; 
+    height: 1.5em; 
+    object-fit: contain;
+    margin-right: 0.25em;
+}
+
+header > ul {
+    margin-left: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--main-bg-color);
+}
+
+/***************/
+/* BURGER MENU */
+/***************/
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70vw;
+    height: 100vh;
+    background: var(--main-bg-color);
+    transition: 0.3s ease-in-out;
+    padding: 2em 1em 2em 2em;
+    z-index: 1000;
+
+    font-family: Helvetica, arial, sans-serif;
+}
+
+nav.open {
+    right: 0;
+}
+
+/* Close button  */
+nav button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main nav  */
+
+nav ul:nth-of-type(1) {
+    list-style-type: none;
+    padding: 1em 0;
+}
+
+nav ul:nth-of-type(1) li {
+    padding: .5em 0;
+}
+
+nav ul:nth-of-type(1) li a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--main-txt-color);
+}
+
+nav ul:nth-of-type(1) li a:hover {
+    color: var(--sec-txt-color);
+}
+
+nav ul:nth-of-type(1) li img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
+/* Sub-merken */
+nav ul:nth-of-type(2) {
+    list-style-type: none;
+    padding: 1em 0;
+}
+
+nav ul:nth-of-type(2) li {
+    padding: .5em 0;
+}
+
+nav ul:nth-of-type(2) li img {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+    margin-right: 1em;
+    margin-left: 0;
+}
+
+nav ul:nth-of-type(2) li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 550;
+    color: var(--main-txt-color);
+}
+
+/* Account */
+
+nav p {
+    font-size: 1.2rem;
+    color: var(--sec-txt-color);
+    padding: 1em 0;
+    line-height: 1.5em;
+
+}
+
+nav p > a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--main-txt-color);
+}
+
+nav > a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--main-txt-color);
+    padding: .5em 1em ;
+    border-radius: 5em;
+}
+
+nav > a:nth-of-type(1) {
+    color: var(--button-txt-color);
+    background-color: var(--button-bg-color);
+}
+
+nav > a:nth-of-type(1):hover {
+    background-color: var(--sec-txt-color);
+}
+
+nav > a:nth-of-type(2) {
+    color: var(--main-txt-color);
+    border: 1px solid var(--button-bg-color);
+    margin-left: 1em;
+}
+
+nav > a:nth-of-type(2):hover {
+    background-color: var(--sec-txt-color);
+    border: 0;
+}
+
+/* Sub-nav */
+
+nav ul:nth-of-type(3) {
+    list-style-type: none;
+    padding: 1em 0;
+}
+
+nav ul:nth-of-type(3) li {
+    padding: .5em 0;
+}
+
+nav ul:nth-of-type(3) li img {
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: contain;
+    margin-right: 1em;
+    margin-left: 0;
+}
+
+nav ul:nth-of-type(3) li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--main-txt-color);
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer details summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .9rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+}
+
+footer summary::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url('../images/icons/down.png') no-repeat center center;
+    background-size: 100%;
+    transition: 0.2s;
+}
+
+footer details[open] > summary::after {
+    transform: rotate(180deg);
+  }
+
+footer details ul{
+    list-style: none;
+    padding: 0 1em 0;
+}
+
+footer details li{
+    padding: .5em 0em;
+}
+
+footer details  a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+/* Taal knop */
+
+footer button {
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--main-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--sec-bg-color);
+    background: none;
+    
+    padding: 1.5rem 0em;
+    margin: 0 1em 0 1em;
+
+    width: 95vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer; 
+}
+
+footer button::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/globe.png') no-repeat;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
+/* Dark mode */
+
+footer form legend{
+    padding-bottom: 1em;
+    align-items: center;
+    display: flex;
+}
+
+footer form legend::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/dark.png') no-repeat;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
+footer form {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    margin: 1em;
+}
+
+footer p {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+    text-align: left;
+
+    padding: 1.5rem 0 0 0 ;
+    margin: 0 1em 0 1em;
+}
+footer ul{
+    list-style: none;
+    padding: 0 0 0;
+    margin: 1em;
+}
+    
+footer ul a{
+    text-decoration: none;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: .8rem;
+    color: var(--sec-txt-color);
+    font-weight: 580;
+}
+
+footer ul li {
+    padding: 1rem 0 0 0;
+}
+
+/*******************/
+/* LIGHT/DARK MODE */
+/*******************/
+
+/* Auto Mode */
+:root:has([value="auto"]:checked) {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has([value="auto"]:checked) header > a > img {
+        content: url(../images/icons/darkMode/NikeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(1) > img {
+        content: url(../images/icons/darkMode/searchDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(2) > img {
+        content: url(../images/icons/darkMode/userDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(3) > img {
+        content: url(../images/icons/darkMode/shoppingDark.png);
+    }
+
+    :root:has([value="auto"]:checked) header > ul > button > img {
+        content: url(../images/icons/darkMode/menuDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav button img {
+        content: url(../images/icons/darkMode/closeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(1) li img {
+        content: url(../images/icons/darkMode/rightDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(2) li:nth-of-type(1) img {
+        content: url(../images/icons/darkMode/jumpmanDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(2) li:nth-of-type(2) img {
+        content: url(../images/icons/darkMode/converseDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(3) li:nth-of-type(1) img {
+        content: url(../images/icons/darkMode/questionDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(3) li:nth-of-type(2) img {
+        content: url(../images/icons/darkMode/shoppingDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(3) li:nth-of-type(3) img {
+        content: url(../images/icons/darkMode/deliveryDark.png);
+    }
+
+    :root:has([value="auto"]:checked) nav ul:nth-of-type(3) li:nth-of-type(4) img {
+        content: url(../images/icons/darkMode/storeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer summary::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer button::before {
+        background-image: url(../images/icons/darkMode/globeDark.png);
+    }
+
+    :root:has([value="auto"]:checked) footer form legend::before {
+        background-image: url(../images/icons/darkMode/light.png);
+    }
+
+    :root:has([value="auto"]:checked) footer details::after {
+        background-image: url(../images/icons/darkMode/downDark.png);
+    }
+
+}
+
+/* Light Mode */
+:root:has([value="light"]:checked) {
+    color-scheme: light;
+}
+
+:root:has([value="light"]:checked) header > a > img {
+    content: url(../images/icons/Nike.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/search.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/user.png);
+}
+
+:root:has([value="light"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/shopping.png);
+}
+
+:root:has([value="light"]:checked) header > ul > button > img {
+    content: url(../images/icons/menu.png);
+}
+
+:root:has([value="light"]:checked) nav button img {
+    content: url(../images/icons/close.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(1) li img {
+    content: url(../images/icons/right.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(2) li:nth-of-type(1) img {
+    content: url(../images/icons/jumpman.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(2) li:nth-of-type(2) img {
+    content: url(../images/icons/converse.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(3) li:nth-of-type(1) img {
+    content: url(../images/icons/question.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(3) li:nth-of-type(2) img {
+    content: url(../images/icons/shopping.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(3) li:nth-of-type(3) img {
+    content: url(../images/icons/delivery.png);
+}
+
+:root:has([value="light"]:checked) nav ul:nth-of-type(3) li:nth-of-type(4) img {
+    content: url(../images/icons/store.png);
+}
+
+:root:has([value="light"]:checked) footer summary::after {
+    background-image: url(../images/icons/down.png);
+}
+
+:root:has([value="light"]:checked) footer button::before {
+    background-image: url(../images/icons/globe.png);
+}
+
+:root:has([value="light"]:checked) footer form legend::before {
+    background-image: url(../images/icons/dark.png);
+}
+
+
+/* Dark Mode */
+:root:has([value="dark"]:checked) {
+    color-scheme: dark;
+}
+
+:root:has([value="dark"]:checked) header > a > img {
+    content: url(../images/icons/darkMode/NikeDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(1) > img {
+    content: url(../images/icons/darkMode/searchDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(2) > img {
+    content: url(../images/icons/darkMode/userDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > a:nth-of-type(3) > img {
+    content: url(../images/icons/darkMode/shoppingDark.png);
+}
+
+:root:has([value="dark"]:checked) header > ul > button > img {
+    content: url(../images/icons/darkMode/menuDark.png);
+}
+
+:root:has([value="dark"]:checked) nav button img {
+    content: url(../images/icons/darkMode/closeDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(1) li img {
+    content: url(../images/icons/darkMode/rightDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(2) li:nth-of-type(1) img {
+    content: url(../images/icons/darkMode/jumpmanDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(2) li:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/converseDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(3) li:nth-of-type(1) img {
+    content: url(../images/icons/darkMode/questionDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(3) li:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/shoppingDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(3) li:nth-of-type(3) img {
+    content: url(../images/icons/darkMode/deliveryDark.png);
+}
+
+:root:has([value="dark"]:checked) nav ul:nth-of-type(3) li:nth-of-type(4) img {
+    content: url(../images/icons/darkMode/storeDark.png);
+}
+
+:root:has([value="dark"]:checked) footer summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+
+:root:has([value="dark"]:checked) footer button::before {
+    background-image: url(../images/icons/darkMode/globeDark.png);
+}
+
+:root:has([value="dark"]:checked) footer form legend::before {
+    background-image: url(../images/icons/darkMode/light.png);
+}

@@ -10,7 +10,7 @@
     <!-- CSS -->
 
     <!-- Generieke stylesheet met alles van beide, en dan aparte per pagina -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styleProductPagina.css">
     
 </head>
@@ -24,7 +24,7 @@
             <a href="#"><img src="images/icons/search.png" alt="Zoeken"></a>
             <a href="#"><img src="images/icons/user.png" alt="Account"></a>
             <a href="#"><img src="images/icons/shopping.png" alt="Winkelmand"></a>
-            <button><img src="images/icons/menu.png" alt="Menu" /></button>
+            <button><img src="images/icons/menu.png" alt="Menu"/></button>
         </ul>
 
         <!-- Burger Menu -->
@@ -32,16 +32,26 @@
         <nav>
             <!-- de sluit button -->
             <!-- de button is ook niet relevant voor screenreaders -->
-            <button aria-hidden="true"><img src="...." alt="" />Sluit</button>
+            <button aria-hidden="true"><img src="../FED2425/images/icons/close.png" alt="Sluit knop voor menu" /></button>
             
             <ul>
-              <li><a href="#"></a> Nieuw en uitgelicht</a></li>
-              <li><a href="#"></a> Heren</a></li>
-              <li><a href="#"></a> Dames</a></li>
-              <li><a href="#"></a> Kids</a></li>
-              <li><a href="#"></a> Sale</a></li>
-              <li><img src="../FED2425/images/icons/jumpman.png" alt="Jordan's website"><a href="#"></a> Jordan</a></li>
-              <li><img src="../FED2425/images/icons/converse.png" alt="Converse website"><a href="#"></a> Converse</a></li>
+              <li><a href="#">Nieuw en uitgelicht<img src="../FED2425/images/icons/right.png"></a></li>
+              <li><a href="#">Heren<img src="../FED2425/images/icons/right.png"></a></li>
+              <li><a href="#">Dames<img src="../FED2425/images/icons/right.png"></a></li>
+              <li><a href="#">Kids<img src="../FED2425/images/icons/right.png"></a></li>
+              <li><a href="#">Sale<img src="../FED2425/images/icons/right.png"></a></li>
+            </ul>
+            <ul>
+              <li><a href="#"><img src="../FED2425/images/icons/jumpman.png">Jordan</a></li>
+              <li><a href="#"><img src="../FED2425/images/icons/converse.png">Converse</a></li>
+            </ul>
+            <p>Word Nike member en geniet van de beste producten, inspiratie en verhalen op het gebied van sport. <a href="#">Meer info</a></p>
+            <a href="#">Join Us</a><a href="#">Log in</a>
+            <ul>
+                <li><a href="#"><img src="../FED2425/images/icons/question.png">Help</a></li>
+                <li><a href="#"><img src="../FED2425/images/icons/shopping.png">Winkelmand</a></li>
+                <li><a href="#"><img src="../FED2425/images/icons/delivery.png">Bestelling</a></li>
+                <li><a href="#"><img src="../FED2425/images/icons/store.png">Zoek een store</a></li>
             </ul>
         </nav>        
 
@@ -60,58 +70,35 @@
     
 
     <!-- Slideshow container -->
-    <div class="slideshow-container">
+    <section>
+        <p><img src="../FED2425/images/icons/starsingle.png">Goede beoordeling</p>
+        <ul>
+            <li><img src="../FED2425/images/productpage/productFoto1.png" alt="Buitenzijde van de Nike Air Max Plus III sneaker"></li>
+            <li><img src="../FED2425/images/productpage/productFoto2.png" alt="Onderkant van de Nike Air Max Plus III sneaker"></li>
+            <li><img src="../FED2425/images/productpage/productFoto3.png" alt="Binnenzijde van de Nike Air Max Plus III sneaker"></li>
+            <li><img src="../FED2425/images/productpage/productFoto4.jpeg" alt="Bovenkant van de Nike Air Max Plus III sneaker"></li>
+            <li><img src="../FED2425/images/productpage/productFoto5.jpeg" alt="Product foto 5"></li>
+            <li><img src="../FED2425/images/productpage/productFoto6.png" alt="Product foto 6"></li>
+            <li><img src="../FED2425/images/productpage/productFoto7.png" alt="Product foto 7"></li>
+        </ul>
 
-    <!-- Full-width images with number and caption text -->
-
-    <!-- maak hier een ul li van in plaats van divjes-->
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto1.png">
-    </div>
-  
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto2.png" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto3.png" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto4.jpeg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto5.jpeg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto6.png" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="images/productpage/productFoto7.png" style="width:100%">
-    </div>
-  
-    </div>
-  
-    <!-- The dots/circles -->
-    <!-- onclicks naar eventlisteners in javascript dus uit html -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-    </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
 
     <!-- Maat selectie -->
 
     <section>
+        <form>
         <h2>Selecteer maat</h2>
-        <a href="#">Maatwijzer</a>        
+        <a href="#"><img src="../FED2425/images/icons/size.png">Maatwijzer</a>        
         <!-- form met buttons, input met submits-->
         <ul>
             <li><button>EU 35.5</button></li>
@@ -139,18 +126,18 @@
             <li><button>EU 49.5</button></li>
         </ul>
         <p>Valt klein; we raden je aan een halve maat groter te bestellen</p>
-    </section>
+
     
     <!-- Winkelmand knoppen -->
 
-    <section>
-        <p>Klarna Beschikbaar bij het afrekenen.</p>
+        <p><img src="../FED2425/images/icons/klarna.png"> Beschikbaar bij het afrekenen.</p>
         <button>Voeg toe aan winkelmandje</button>
-        <button>Markeer als favoriet</button>
+        <button>Markeer als favoriet <img src="../FED2425/images/icons/heart.png"></button>
         <p>Dit product komt niet in aanmerking voor promoties en kortingen op de site.</p>
         <p>Gratis ophalen</p>
         <button>Zoek een store</button>
         <p>Click & Collect kan worden gekozen bij het afrekenen</p>
+        </form>
     </section>
 
     <!-- Omschrijving -->
@@ -187,8 +174,9 @@
             </ul>
         </details>
         <details>
-            <summary>Beoordelingen (79)</summary>
-            <img src="images/icons/star.png" alt="Star rating">
+            <summary>Beoordelingen (79) <img src="../FED2425/images/icons/star.png"></summary>
+            <img src="images/icons/star.png" alt="Star rating"><p>5 Sterren</p>
+            <a href="#">Schrijf een beoordeling</a>
             <ul>
                 <li>
                     <h3>Een top product.</h3>
@@ -197,7 +185,7 @@
                     <p>Geweldig product met een perfecte pasvorm! I love it🥰😍 Ik had een zwart/grijs exemplaar. Heel mooi.</p>
                 </li>
                 <li>
-                    <h3></h3>
+                    <h3>Skön</h3>
                     <img src="images/icons/star.png" alt="Star rating">
                     <p>AnahidK351091137 - 15 dec 2024</p>
                     <p>Väldigt bekväm och skön skor. Storleken stämmer.</p>
@@ -205,7 +193,7 @@
                 <li>
                     <h3>Bellissima</h3>
                     <img src="images/icons/star.png" alt="Star rating">
-                    <p>AnahidK351091137 - 15 dec 2024</p>
+                    <p>Paolo328652178 - 14 dec 2024</p>
                     <p>Scapra bellissima e comoda tessuto morbido e robusto consiglio una mezza taglia in più..</p>
                 </li>
             </ul>
@@ -224,31 +212,87 @@
     <!-- Maak de look af -->
 
     <section>
-        <h2>Ontdek meer</h2>
+        <h2>Maak de look af</h2>
         <ul>
             <li>
-                <a href="#">
-                <img src="images/homepage/ontdekmeerDames.jpg" alt="Shop voor Dameskleding">
-                <h3> Dames </h3>
-                </a>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/11.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/12.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/13.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/14.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
             </li>
             <li>
-                <a href="#">
-                <img src="images/homepage/ontdekmeerHeren.jpg" alt="Shop voor Herenkleding">
-                <h3> Heren </h3>
-                </a>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/21.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/22.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/23.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/24.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
             </li>
             <li>
-                <a href="#">
-                <img src="images/homepage/ontdekmeerKids.jpg" alt="Shop voor Kinderkleding">
-                <h3> Kids </h3>
-                </a>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/31.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/32.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/33.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/34.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
             </li>
             <li>
-                <a href="#">
-                <img src="images/homepage/ontdekmeerTeens.jpg" alt="Shop voor Tienerkleding">
-                <h3> Teens </h3>
-                </a>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/41.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/42.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/43.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/44.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/51.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/52.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/53.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/54.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/61.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/62.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/63.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/64.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/71.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/72.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/73.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/74.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/81.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/82.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/83.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/84.avif" alt=""></a></li>
+                    <li><a href="#"><img src="../FED2425/images/productpage/maakDeLookAf/deSchoenen.avif" alt=""></a></li>
+                    <li><button><img src="../FED2425/images/icons/eye.png" alt=""><p>Bekijk de hele look </p></button></li>
+                </ul>
             </li>
         </ul>
     </section>
@@ -346,17 +390,6 @@
         </ul>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
     </main>
     
     <footer>
@@ -399,6 +432,14 @@
             </ul>
         </details>
         <button>Nederland</button>
+
+        <form>
+                <legend>Dark/light mode</legend>
+                <label><input type="radio" value="auto" name="theme" checked>Auto</label>
+                <label><input type="radio" value="dark" name="theme">Dark Mode</label>
+                <label><input type="radio" value="light" name="theme">Light Mode</label>
+        </form>
+
         <p>© 2025 Nike, Inc. Alle rechten voorbehouden</p>
         <ul>
             <li><a href="#">Handleidingen</a></li>
@@ -411,6 +452,6 @@
     </footer>
 </body>
 
-<script src="scripts/script.js"></script> 
+<script src="scripts/scriptProductpage.js"></script> 
 
 </html>

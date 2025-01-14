@@ -23,6 +23,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Je focus:
   Surface
+  1. Werkende slideshow productpagina
+  2. Custom theme
+  3. Side scroll knoppen
+  4. Hover interacties van "Maak de look af"
+  5. Lettergrootte kunnen instellen 
  
 </details>
 
@@ -56,7 +61,47 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  De content op de website van Nike gebruikt duidelijke taal zonder onnodig complexe metaforen. 
+  Bij het valideren van de HTML-code bleek deze niet volledig valide te zijn. Positief was het 
+  ebruik van het lang-attribuut, evenals het feit dat elke pagina een unieke titel had. Bovendien
+  was de viewport niet uitgeschakeld, wat bijdraagt aan een betere gebruikerservaring op 
+  verschillende apparaten.
+
+  De website biedt een zichtbare focus voor toetsenbordnavigatie, wat essentieel is voor gebruikers 
+  die geen muis gebruiken. Helaas kwam de focusstijl niet overeen met de visuele layout, waardoor de
+  navigatie minder intuïtief was.
+
+  Op mobiele apparaten was de website niet goed leesbaar in een horizontale layout, hoewel het wel 
+  mogelijk was om het scherm te roteren. Er was geen horizontale scroll nodig, en knoppen en links 
+  waren eenvoudig te activeren dankzij de voldoende ruimte tussen interactieve elementen.
+
+  De structuur van headings op de website liet te wensen over. Er werden geen headings gebruikt om 
+  nieuwe content te introduceren, en er was meer dan één H1-element per pagina aanwezig. Daarnaast 
+  was de volgorde van de headings niet logisch en werden sommige niveaus overgeslagen.
+
+  Bij de contentstructurering maakte de website correct gebruik van lijstelementen. Wat betreft 
+  afbeeldingen hadden niet alle img-elementen een alt-attribuut. Sommige decoratieve iconen bevatten 
+  wel een alt, wat niet nodig was. Er waren geen complexe afbeeldingen aanwezig, maar afbeeldingen 
+  met tekst hadden geen alternatieve tekst die de inhoud ervan beschreef.
+
+  De media op de website bood beperkte toegankelijkheidsopties. Video’s speelden niet automatisch af, 
+  maar konden ook niet gepauzeerd worden. Verder ontbraken ondertiteling bij video’s en transcripties 
+  bij audio. Daarnaast ondersteunde de website geen "reduced motion"-opties via media queries en was 
+  er geen mogelijkheid om animaties te pauzeren.
+
+  Interactie-elementen op de website waren over het algemeen goed gestructureerd. Links gebruikten het 
+  correcte a-element en waren voorzien van een herkenbare focusstatus. Knoppen waren gebaseerd op het 
+  button-element, maar er was geen zichtbare skip-link beschikbaar bij toetsenbordfocus. Verder ontbrak 
+  een indicatie voor links die in een nieuw tabblad of venster werden geopend.
+
+
+  De website bood geen opties voor een donkere of lichte modus, maar beschikte wel over een high 
+  contrast-modus. Het vergroten van tekst tot 200% zonder functieverlies was niet mogelijk. Kleur werd 
+  echter niet als enige middel gebruikt om informatie over te brengen, wat een goede praktijk is. Alle 
+  animaties waren subtiel en niet overweldigend, maar er was geen optie om deze te pauzeren. Het 
+  kleurcontrast was goed voor normale tekst, iconen en tekst die over video of afbeeldingen werd 
+  weergegeven. Daarnaast gebruikte de website een aangepaste ::selection-kleur, wat een positieve 
+  toevoeging is.
 
 </details>
 
@@ -173,10 +218,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Maak standaard CSS voor de generieke stijling over beide pagina's
+  - Semantisch correcte gallerij maken
+  - Fonts en typografie bij elkaar, kan je ze weghalen bij individuele elementen.
+  - onclicks naar eventlisteners in javascript dus uit html
 
 </details>
 
@@ -231,10 +276,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   11. https://www.w3schools.com/howto/howto_js_slideshow.asp
   12. https://www.sitepoint.com/style-html-details-element/
   13. https://www.w3schools.com/css/css_padding.asp
-  14. 
-  15. 
-  16. 
-  17.
+  14. https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
+  15. https://developer.mozilla.org/en-US/docs/Web/CSS/border
+  16. https://www.w3schools.com/html/html_forms.asp
+  17. https://www.w3schools.com/css/css_form.asp
   18.
   19.
   20.
