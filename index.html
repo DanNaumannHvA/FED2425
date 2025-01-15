@@ -18,10 +18,10 @@
         <a href="#"><img src="images/icons/nike.png" alt="Nike logo"></a>
         
         <ul>
-            <a href="#"><img src="images/icons/search.png" alt="Zoeken"></a>
-            <a href="#"><img src="images/icons/user.png" alt="Account"></a>
-            <a href="#"><img src="images/icons/shopping.png" alt="Winkelmand"></a>
-            <button><img src="images/icons/menu.png" alt="Menu" /></button>
+            <li><a href="#"><img src="images/icons/search.png" alt="Zoeken"></a></li>
+            <li><a href="#"><img src="images/icons/user.png" alt="Account"></a></li>
+            <li><a href="#"><img src="images/icons/shopping.png" alt="Winkelmand"></a></li>
+            <li><button><img src="images/icons/menu.png" alt="Menu"></button></li>
         </ul>
 
         <!-- Burger Menu -->
@@ -29,7 +29,7 @@
         <nav>
             <!-- de sluit button -->
             <!-- de button is ook niet relevant voor screenreaders -->
-            <button aria-hidden="true"><img src="../FED2425/images/icons/close.png" alt="Sluit knop voor menu" /></button>
+            <button aria-hidden="true"><img src="../FED2425/images/icons/close.png" alt="Sluit knop voor menu"></button>
             
             <ul>
               <li><a href="#">Nieuw en uitgelicht<img src="../FED2425/images/icons/right.png"></a></li>
@@ -58,10 +58,11 @@
     <main>
 
         <!-- BANNER -->
-
         <section>
+            <h1>Nike homepage</h1>
             <article>
-                <img src="images/homepage/banner.jpg" alt="de nieuwste winterkleding">
+                <h2>De nieuwste winterkleding van Nike</h2>
+                <img src="images/homepage/banner.jpg" alt="Foto van 2 modellen met de nieuwste winterkleding van Nike">
             </article>
             <article>
                 <h2>Geef sport</h2>
@@ -348,6 +349,7 @@
         <!-- OVERIGE LINKS -->
 
         <section>
+            <h2>Mini sitemap</h2>
             <details>
                 <summary>Schoenen</summary>
                 <ul>
@@ -425,12 +427,12 @@
         </details>
         <button>Nederland</button>
 
-        <form>
+        <fieldset>
                 <legend>Dark/light mode</legend>
                 <label><input type="radio" value="auto" name="theme" checked>Auto</label>
                 <label><input type="radio" value="dark" name="theme">Dark Mode</label>
                 <label><input type="radio" value="light" name="theme">Light Mode</label>
-        </form>
+        </fieldset>
 
         <p>© 2025 Nike, Inc. Alle rechten voorbehouden</p>
         <ul>
@@ -442,8 +444,6 @@
             <li><a href="#">Privacy en cookie-instellingen</a></li>
         </ul>
     </footer>
+    <script src="scripts/scriptHomepage.js"></script> 
 </body>
-
-<script src="scripts/scriptHomepage.js"></script> 
-
 </html>

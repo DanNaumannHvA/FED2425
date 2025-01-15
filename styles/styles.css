@@ -62,6 +62,8 @@ header img {
 
 header > ul {
     margin-left: auto;
+    list-style: none;
+    display: flex;
 }
 
 header button {
@@ -77,7 +79,7 @@ nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
     background: var(--main-bg-color);
     transition: 0.3s ease-in-out;
@@ -106,6 +108,7 @@ nav button {
 nav ul:nth-of-type(1) {
     list-style-type: none;
     padding: 1em 0;
+    margin: 0;
 }
 
 nav ul:nth-of-type(1) li {
@@ -134,6 +137,7 @@ nav ul:nth-of-type(1) li img {
 nav ul:nth-of-type(2) {
     list-style-type: none;
     padding: 1em 0;
+    margin: 0;
 }
 
 nav ul:nth-of-type(2) li {
@@ -324,13 +328,13 @@ footer button::before {
 
 /* Dark mode */
 
-footer form legend{
+footer fieldset legend{
     padding-bottom: 1em;
     align-items: center;
     display: flex;
 }
 
-footer form legend::before {
+footer fieldset legend::before {
     content: '';
     display: inline-block;
     width: 16px; 
@@ -340,10 +344,12 @@ footer form legend::before {
     margin-right: 1em;
 }
 
-footer form {
+footer fieldset {
     font-family: Helvetica, arial, sans-serif;
     font-size: .8rem;
     margin: 1em;
+    padding: 0;
+    border: none;
 }
 
 footer p {
@@ -370,7 +376,7 @@ footer ul a{
     font-weight: 580;
 }
 
-footer ul li {
+footer > ul:last-of-type li {
     padding: 1rem 0 0 0;
 }
 
@@ -388,19 +394,19 @@ footer ul li {
         content: url(../images/icons/darkMode/NikeDark.png);
     }
 
-    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(1) > img {
+    :root:has([value="auto"]:checked) header > ul > li:nth-of-type(1) > a > img {
         content: url(../images/icons/darkMode/searchDark.png);
     }
 
-    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(2) > img {
+    :root:has([value="auto"]:checked) header > ul > li:nth-of-type(2) > a > img {
         content: url(../images/icons/darkMode/userDark.png);
     }
 
-    :root:has([value="auto"]:checked) header > ul > a:nth-of-type(3) > img {
+    :root:has([value="auto"]:checked) header > ul > li:nth-of-type(3) > a > img {
         content: url(../images/icons/darkMode/shoppingDark.png);
     }
 
-    :root:has([value="auto"]:checked) header > ul > button > img {
+    :root:has([value="auto"]:checked) header > ul > li:nth-of-type(4) > button > img {
         content: url(../images/icons/darkMode/menuDark.png);
     }
 
@@ -444,7 +450,7 @@ footer ul li {
         background-image: url(../images/icons/darkMode/globeDark.png);
     }
 
-    :root:has([value="auto"]:checked) footer form legend::before {
+    :root:has([value="auto"]:checked) footer fieldset legend::before {
         background-image: url(../images/icons/darkMode/light.png);
     }
 
@@ -463,19 +469,19 @@ footer ul li {
     content: url(../images/icons/Nike.png);
 }
 
-:root:has([value="light"]:checked) header > ul > a:nth-of-type(1) > img {
+:root:has([value="light"]:checked) header > ul > li:nth-of-type(1) > a > img {
     content: url(../images/icons/search.png);
 }
 
-:root:has([value="light"]:checked) header > ul > a:nth-of-type(2) > img {
+:root:has([value="light"]:checked) header > ul > li:nth-of-type(2) > a > img {
     content: url(../images/icons/user.png);
 }
 
-:root:has([value="light"]:checked) header > ul > a:nth-of-type(3) > img {
+:root:has([value="light"]:checked) header > ul > li:nth-of-type(3) > a > img {
     content: url(../images/icons/shopping.png);
 }
 
-:root:has([value="light"]:checked) header > ul > button > img {
+:root:has([value="light"]:checked) header > ul > li:nth-of-type(4) > button > img {
     content: url(../images/icons/menu.png);
 }
 
@@ -519,7 +525,7 @@ footer ul li {
     background-image: url(../images/icons/globe.png);
 }
 
-:root:has([value="light"]:checked) footer form legend::before {
+:root:has([value="light"]:checked) footer fieldset legend::before {
     background-image: url(../images/icons/dark.png);
 }
 
@@ -533,19 +539,19 @@ footer ul li {
     content: url(../images/icons/darkMode/NikeDark.png);
 }
 
-:root:has([value="dark"]:checked) header > ul > a:nth-of-type(1) > img {
+:root:has([value="dark"]:checked) header > ul > li:nth-of-type(1) > a > img {
     content: url(../images/icons/darkMode/searchDark.png);
 }
 
-:root:has([value="dark"]:checked) header > ul > a:nth-of-type(2) > img {
+:root:has([value="dark"]:checked) header > ul > li:nth-of-type(2) > a > img {
     content: url(../images/icons/darkMode/userDark.png);
 }
 
-:root:has([value="dark"]:checked) header > ul > a:nth-of-type(3) > img {
+:root:has([value="dark"]:checked) header > ul > li:nth-of-type(3) > a > img {
     content: url(../images/icons/darkMode/shoppingDark.png);
 }
 
-:root:has([value="dark"]:checked) header > ul > button > img {
+:root:has([value="dark"]:checked) header > ul > li:nth-of-type(4) > button > img {
     content: url(../images/icons/darkMode/menuDark.png);
 }
 
@@ -589,6 +595,6 @@ footer ul li {
     background-image: url(../images/icons/darkMode/globeDark.png);
 }
 
-:root:has([value="dark"]:checked) footer form legend::before {
+:root:has([value="dark"]:checked) footer fieldset legend::before {
     background-image: url(../images/icons/darkMode/light.png);
 }

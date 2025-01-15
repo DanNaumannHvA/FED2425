@@ -660,12 +660,12 @@ section:nth-of-type(7) li > ul button img {
     margin: .5em;
 }
 
-section:nth-of-type(7) li > ul button p {
+section:nth-of-type(7) li > ul button {
     margin: 0;
     display: none;
 }
 
-section:nth-of-type(7) li > ul button:hover p {
+section:nth-of-type(7) li > ul button:hover {
     margin: 0;
     display: block;
     padding-right: .5em;
