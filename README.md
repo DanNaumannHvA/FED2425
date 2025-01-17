@@ -242,8 +242,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="../FED2425/readme-images/Nike-Homepage-remake.png" width="375px" alt="Homepage">
-  <img src="../FED2425/readme-images/Nike-Productpage-remake.png" width="375px" alt="Productpage">
+  <img src="readme-images/Nike-Homepage-remake.png" width="375px" alt="Homepage">
+  <img src="readme-images/Nike-Productpage-remake.png" width="375px" alt="Productpage">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -259,7 +259,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Dit waren nieuwe aspecten die ik niet had verwacht te leren en waarvan ik niet had ingeschat 
   dat ik ze zo snel zou oppakken. Over het algemeen ben ik dan ook erg tevreden met het resultaat.
 
-  <img src="../FED2425/readme-images/watGingGoed1.png" width="375px" alt="Maak de look af">
+  <img src="readme-images/watGingGoed1.png" width="375px" alt="Maak de look af">
 
 
 
@@ -274,8 +274,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   volgende poging wil ik deze uitdaging zeker aangaan om mijn vaardigheden hierin verder te 
   ontwikkelen.
 
-  <img src="../FED2425/readme-images/watGingGoed2.png" width="375px" alt="Lange code">
-  <img src="../FED2425/readme-images/watGingGoed3.png" width="375px" alt="Responsiveness">
+  <img src="readme-images/watGingGoed2.png" width="375px" alt="Lange code">
+  <img src="readme-images/watGingGoed3.png" width="375px" alt="Responsiveness">
 
 </details>
 
