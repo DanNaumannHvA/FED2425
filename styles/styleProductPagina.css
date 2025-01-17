@@ -2,34 +2,37 @@
 /* PRODUCT */
 /***********/
 
-section:nth-of-type(1) {
-    font-family: Helvetica, arial, sans-serif;
-}
-
 section:nth-of-type(1) h1 {
-	font-size: 1.5rem;
+	font-size: var(--font-size-xl);
+    margin: 1rem;
+    font-weight: 580;
+    color: var(--main-txt-color);
 	margin: 1rem;
     font-weight: normal;
     color: var(--main-txt-color);
 }
 
-section:nth-of-type(1) p:nth-of-type(1) {
-	font-size: 1rem;
+section:nth-of-type(1) p {
+	font-size: var(--font-size-m);
 	margin: 1rem;
     font-weight: normal;
+}
+
+section:nth-of-type(1) p:nth-of-type(1) {
     color: var(--sec-txt-color);
 }
 
 section:nth-of-type(1) p:nth-of-type(2) {
-	font-size: 1rem;
-	margin: 1rem;
-    font-weight: normal;
     color: var(--main-txt-color);
 }
 
 /*************/
 /* SLIDESHOW */
 /*************/
+
+section:nth-of-type(2) > h2 {
+    display: none;
+}
 
 /* Slideshow */
 section:nth-of-type(2) {
@@ -39,8 +42,7 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2) p {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .9em;
+	font-size: var(--font-size-s);
     font-weight: 580;
     color: var(--main-txt-color);
     display: flex;
@@ -62,17 +64,17 @@ section:nth-of-type(2) p img {
     margin: 0 0.5rem 0 0;
 }
 
-section:nth-of-type(2) > ul:first-of-type {
+section:nth-of-type(2) > ul:nth-of-type(1){
     padding: 0;
     margin: 0;
     position: relative;
 }
 
-section:nth-of-type(2) > ul:first-of-type li {
+section:nth-of-type(2) > ul:nth-of-type(1) li {
     display: none;
 }
 
-section:nth-of-type(2) > ul:first-of-type li.active {
+section:nth-of-type(2) > ul:nth-of-type(1) li[data-visible="true"] {
     display: block;
 }
 
@@ -83,7 +85,7 @@ section:nth-of-type(2) img {
 }
 
 /* Navigation dots */
-section:nth-of-type(2) > ul:last-of-type {
+section:nth-of-type(2) > ul:nth-of-type(2) {
     display: flex;
     justify-content: center;
     gap: 0.5em;
@@ -97,7 +99,7 @@ section:nth-of-type(2) > ul:last-of-type {
     z-index: 1;
 }
 
-section:nth-of-type(2) > ul:last-of-type li {
+section:nth-of-type(2) > ul:nth-of-type(2) li {
     width: 0.5rem;
     height: 0.5rem;
     background-color: var(--main-txt-color);
@@ -106,8 +108,8 @@ section:nth-of-type(2) > ul:last-of-type li {
     transition: background-color 0.6s ease;
 }
 
-section:nth-of-type(2) > ul:last-of-type li.active,
-section:nth-of-type(2) > ul:last-of-type li:hover {
+section:nth-of-type(2) > ul:nth-of-type(2) li[data-visible="true"],
+section:nth-of-type(2) > ul:nth-of-type(2) li:hover {
     background-color: var(--sec-txt-color);
 }
 
@@ -126,7 +128,6 @@ section:nth-of-type(2) > ul:last-of-type li:hover {
 /**********************/
 
 section:nth-of-type(3) form {
-    font-family: Helvetica, arial, sans-serif;
     padding: 1em;
     display: flex;
     flex-wrap: wrap;
@@ -135,7 +136,7 @@ section:nth-of-type(3) form {
 }
 
 section:nth-of-type(3) form h2 {
-    font-size: 1rem;
+	font-size: var(--font-size-m);
     margin: 0;
     font-weight: 580;
     color: var(--main-txt-color);
@@ -144,7 +145,7 @@ section:nth-of-type(3) form h2 {
 section:nth-of-type(3) form a {
     display: flex;
     align-items: center;
-    font-size: .9rem;
+	font-size: var(--font-size-s);
     margin: 0;
     font-weight: normal;
     color: var(--main-txt-color);
@@ -187,7 +188,7 @@ section:nth-of-type(3) form li button {
     align-items: center; 
     gap: 0.5rem;
 
-    font-size: 1em; 
+	font-size: var(--font-size-m);
     width: 12rem;
     height: 3rem;
     padding: 0;
@@ -203,7 +204,7 @@ section:nth-of-type(3) form li button:hover {
 /* Maat onderschrift */
 
 section:nth-of-type(3) form p:nth-of-type(1) {
-    font-size: .9rem;
+	font-size: var(--font-size-s);
     margin: 0;
     color: var(--sec-txt-color);
 }
@@ -224,7 +225,7 @@ section:nth-of-type(3) form p:nth-of-type(2) img{
 /* Voeg toe knop */
 
 section:nth-of-type(3) form > button:nth-of-type(1) {
-    font-size: 1em; 
+	font-size: var(--font-size-m);
     width: 100%;
     height: 4rem;
     color: var(--main-bg-color);
@@ -240,7 +241,7 @@ section:nth-of-type(3) form > button:nth-of-type(1):hover {
 /* Favoriet knop */
 
 section:nth-of-type(3) form > button:nth-of-type(2) {
-    font-size: 1em; 
+	font-size: var(--font-size-m);
     width: 100%;
     height: 4rem;
     color: var(--main-txt-color);
@@ -269,13 +270,13 @@ section:nth-of-type(3) form p:nth-of-type(3) {
     text-align: center;
     color: var(--sec-txt-color);
     padding: 1em;
-    font-size: 1em; 
+	font-size: var(--font-size-m);
     margin: 0;
 
 }
 
 section:nth-of-type(3) form > p:nth-of-type(4) {
-    font-size: 1rem;
+	font-size: var(--font-size-m);
     font-weight: bold;
     color: var(--main-txt-color);
     width: 100%;
@@ -283,11 +284,11 @@ section:nth-of-type(3) form > p:nth-of-type(4) {
 }
 
 section:nth-of-type(3) form > button:nth-of-type(3) {
-    font-size: 1em;
+	font-size: var(--font-size-m);
     font-weight: bold;
-    background-color: var(--main-bg-color);
+    background-color: transparent;
     border-color: var(--main-txt-color);
-    border-width: 0 0 1px;
+    border-width: 0 0 2px;
     text-align: left;
     padding: 0 0 .3em;
     cursor: pointer;
@@ -295,7 +296,7 @@ section:nth-of-type(3) form > button:nth-of-type(3) {
 }
 
 section:nth-of-type(3) form > p:nth-of-type(5) {
-    font-size: .9rem;
+	font-size: var(--font-size-s);
     color: var(--sec-txt-color);
     width: 100%;
 }
@@ -305,8 +306,7 @@ section:nth-of-type(3) form > p:nth-of-type(5) {
 /****************/
 
 section:nth-of-type(4) {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1em;
+	font-size: var(--font-size-m);
     padding: 1em;
 }
 
@@ -315,9 +315,9 @@ section:nth-of-type(4) p {
 }
 
 section:nth-of-type(4) button {
-    font-size: 1em;
+	font-size: var(--font-size-m);
     font-weight: bold;
-    background-color: var(--main-bg-color);
+    background-color: transparent;
     border-width: 0;
     text-align: left;
     padding: 0;
@@ -342,8 +342,7 @@ section:nth-of-type(5) details:nth-of-type(2) summary {
     border-color: var(--sec-bg-color);
 
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1.2rem;
+	font-size: var(--font-size-l);
     color: var(--main-txt-color);
     font-weight: 580;
 }
@@ -367,8 +366,7 @@ section:nth-of-type(5) details[open]:nth-of-type(3) > summary::after
 
 section:nth-of-type(5) details:nth-of-type(1),
 section:nth-of-type(5) details:nth-of-type(2){
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1em;
+	font-size: var(--font-size-m);
 }
 
 section:nth-of-type(5) details:nth-of-type(2) p{
@@ -400,8 +398,7 @@ section:nth-of-type(5) details:nth-of-type(3) summary {
     border-color: var(--sec-bg-color);
 
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1.2rem;
+	font-size: var(--font-size-l);
     color: var(--main-txt-color);
     font-weight: 580;
 }
@@ -433,12 +430,10 @@ section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type + p {
     display: inline-block;
     margin: 1em 1em 1em 0;
     vertical-align: middle;
-    font-family: Helvetica, arial, sans-serif;
 }
 
 section:nth-of-type(5) details:nth-of-type(3) a {
     display: block;
-    font-family: Helvetica, arial, sans-serif;
     color: var(--main-txt-color);
     font-weight: bold;
     margin: 0 1em 2em;
@@ -447,7 +442,6 @@ section:nth-of-type(5) details:nth-of-type(3) a {
 section:nth-of-type(5) details:nth-of-type(3) ul {
     list-style: none;
     padding: 0 1em;
-    font-family: Helvetica, arial, sans-serif;
     margin: 0;
 }
 
@@ -460,8 +454,7 @@ section:nth-of-type(5) details:nth-of-type(3) li {
 }
 
 section:nth-of-type(5) details:nth-of-type(3) li h3 {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--main-txt-color);
     font-weight: 580;
     width: 100vw;
@@ -473,19 +466,19 @@ section:nth-of-type(5) details:nth-of-type(3) li img {
 }
 
 section:nth-of-type(5) details:nth-of-type(3) li p:nth-of-type(1) {
-    font-size: .9rem;
+	font-size: var(--font-size-s);
     color: var(--sec-txt-color);
 }
 
 section:nth-of-type(5) details:nth-of-type(3) li p:nth-of-type(2) {
-    font-size: 1em;
+	font-size: var(--font-size-m);
     color: var(--sec-txt-color);
 }
 
 section:nth-of-type(5) details:nth-of-type(3) button {
-    font-size: 1em;
+	font-size: var(--font-size-m);
     font-weight: bold;
-    background-color: var(--main-bg-color);
+    background-color: transparent;
     border-width: 0;
     text-align: left;
     padding: 1em;
@@ -505,23 +498,21 @@ section:nth-of-type(6) {
 }
 
 section:nth-of-type(6) h2 {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1.5rem;
+	font-size: var(--font-size-xl);
     color: var(--main-txt-color);
     font-weight: 580;
 }
 
 section:nth-of-type(6) p {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--sec-txt-color);
     font-weight: 580;
 }
 
 section:nth-of-type(6) button {
-    font-size: 1em; 
+	font-size: var(--font-size-m);
     color: var(--main-txt-color);
-    background-color: var(--main-bg-color);
+    background-color: transparent;
     border: 2px solid var(--sec-bg-color);
     border-radius: 100px;
     padding: .5em 1.5em .5em;
@@ -536,27 +527,59 @@ section:nth-of-type(6) button:hover {
 /* MAAK DE LOOK AF */
 /*******************/
 
+section:nth-of-type(7) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem;
+}
+
 section:nth-of-type(7) h2 {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 1.5rem;
+	font-size: var(--font-size-xl);
     margin: 1rem;
     font-weight: normal;
+}
+
+section:nth-of-type(7) > button {
+    align-items: center;
+    display: flex;
+    border: none;
+    background: var(--trd-bg-color);
+    padding: .8rem;
+    margin: .5rem;
+    cursor: pointer;
+    border-radius: 5em;
+}
+
+section:nth-of-type(7) > button:nth-of-type(1)  {
+    margin-left: auto;
+}
+
+section:nth-of-type(7) > button:nth-of-type(2)  {
+    margin-right: 0;
+}
+
+
+section:nth-of-type(7) > button > img {
+    width: 1rem;
+    height: 1rem;
 }
 
 section:nth-of-type(7) ul {
     display: flex;
     overflow-x: scroll;
-    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     list-style-type: none;
-    height: 30rem;
     padding: 0;
+    height: 30rem;
+    overflow-y: hidden;
 }
 
-section:nth-of-type(7) li > ul {
+section:nth-of-type(7) ul > li > ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 0;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     height: 30rem; 
     width: 20rem; 
     margin: 1em;
@@ -564,77 +587,150 @@ section:nth-of-type(7) li > ul {
     padding: 2rem;
 }
 
-section:nth-of-type(7) li > ul li {
-    display: flex;
-    align-items: flex-start;
-}
-
-section:nth-of-type(7) li > ul li a {
-    display: flex;
-    justify-content: center;
-}
-
-section:nth-of-type(7) li > ul li:nth-of-type(1) {
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(1) {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
     align-self: start;
     z-index: 2;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(2) {
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    z-index: 4;
+}
+
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(3) {
     grid-column: 3 / span 2;
-    grid-row: 1 /span 2;
+    grid-row: 1 / span 2;
     align-self: start;
     z-index: 2;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(3) {
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(4) {
+    grid-column-start: 3;
+    grid-row: 1;
+    align-self: start;
+    z-index: 4;
+}
+
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(5) {
     grid-column: 2 / span 2;
-    grid-row: 2 / span 2;
+    grid-row: 3 / span 2;
     align-self: center;
+    z-index: 2;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(4) {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-    align-self: center;
-}
-
-section:nth-of-type(7) li > ul li:nth-of-type(5) {
-    grid-column: 3 / span 2;
-    grid-row: 3 / span 1;
-    align-self: center;
-}
-
-section:nth-of-type(7) li > ul li:nth-of-type(6) {
-    grid-column: 1 / span 4;
-    grid-row: 4;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(6) {
+    grid-column: 2;
+    grid-row: 3;
     align-self: end;
+    z-index: 4;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(1) a img {
-    max-width: 85%;
-    height: 40%;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(7) {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    align-self: center;
+    z-index: 3;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(2) a img {
-    max-width: 85%;
-    height: 40%;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(8) {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    align-self: center;
+    z-index: 4;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(3) a img {
-    max-width: 65%;
-    height: 35%;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(9) {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+    align-self: end;
+    z-index: 3;
+
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(4) a img {
-    max-width: 60%;
-    height: 25%;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(10) {
+    grid-column: 1 / span 4;
+    grid-row: 5;
+    align-self: end;
+    z-index: 2;
 }
 
-section:nth-of-type(7) li > ul li:nth-of-type(5) a img {
-    max-width: 70%;
-    height: 25%;
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(2),
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(4),
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(6),
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(8) {
+    background-color: var(--main-bg-color);
+    padding: .5em;
+    border-radius: 1em;
+    width: .1em;
+    height: .1em;
+}
+
+section:nth-of-type(7) ul > li > ul:hover > li:nth-of-type(2),
+section:nth-of-type(7) ul > li > ul:hover > li:nth-of-type(4),
+section:nth-of-type(7) ul > li > ul:hover > li:nth-of-type(6),
+section:nth-of-type(7) ul > li > ul:hover > li:nth-of-type(8),
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(2):hover,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(4):hover,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(6):hover,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(8):hover {
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--sec-txt-color);
+}
+
+section:nth-of-type(7) ul > li > ul:hover button p {
+    margin: 0;
+    display: block; 
+    padding-right: .5em;
+}
+
+
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(2) a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(4) a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(6) a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(8) a {
+    display: none;
+    background-color: var(--main-bg-color);
+    padding: 1em;
+    text-decoration: none;
+}
+
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(2):hover a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(4):hover a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(6):hover a,
+section:nth-of-type(7) ul > li > ul > li:nth-of-type(8):hover a {
+    display: block;
+    min-width: 9rem;
+    border-radius: 0.5em;
+    box-shadow: .1em var(--main-txt-color);
+}
+
+section:nth-of-type(7) li > ul > li > a > h3 {
+    color: var(--main-txt-color);
+	font-size: var(--font-size-xs);
+    margin: 0;
+}
+
+section:nth-of-type(7) li > ul > li > a > p:nth-of-type(1) {
+    color: var(--sec-txt-color);
+	font-size: var(--font-size-xs);
+    padding: .5em 0;
+    margin: 0;
+}
+
+section:nth-of-type(7) li > ul > li > a > p:nth-of-type(2) {
+    color: var(--main-txt-color);
+	font-size: var(--font-size-l);
+    margin: 0;
+}
+
+section:nth-of-type(7) li > ul li a img {
+    max-width: 100%;
+    padding: 1rem;
 }
 
 
@@ -660,15 +756,9 @@ section:nth-of-type(7) li > ul button img {
     margin: .5em;
 }
 
-section:nth-of-type(7) li > ul button {
+section:nth-of-type(7) li > ul button p {
     margin: 0;
     display: none;
-}
-
-section:nth-of-type(7) li > ul button:hover {
-    margin: 0;
-    display: block;
-    padding-right: .5em;
 }
 
 /*********************************/
@@ -676,18 +766,48 @@ section:nth-of-type(7) li > ul button:hover {
 /*********************************/
 
 section:nth-of-type(8) {
-    font-family: Helvetica, arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem;
 }
 
 section:nth-of-type(8) h2 {
-	font-size: 1.5rem;
+	font-size: var(--font-size-xl);
 	margin: 1rem;
     font-weight: normal;
 }
 
-section:nth-of-type(8) ul {
+section:nth-of-type(8) > button {
+    align-items: center;
+    display: flex;
+    border: none;
+    background: var(--trd-bg-color);
+    padding: .8rem;
+    margin: .5rem;
+    cursor: pointer;
+    border-radius: 5em;
+}
+
+section:nth-of-type(8) > button:nth-of-type(1)  {
+    margin-left: auto;
+}
+
+section:nth-of-type(8) > button:nth-of-type(2)  {
+    margin-right: 0;
+}
+
+
+section:nth-of-type(8) > button > img {
+    width: 1rem;
+    height: 1rem;
+}
+
+section:nth-of-type(8) > ul {
     display: flex;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     list-style-type: none;
     padding: 0;
 }
@@ -705,25 +825,25 @@ section:nth-of-type(8) img {
 }
 
 section:nth-of-type(8) h3 {
-	font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--main-txt-color);
     margin: .5rem 0rem;
 }
 
 section:nth-of-type(8) h4 {
-	font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--sec-txt-color);
     margin: .5rem 0rem;
 }
 
 section:nth-of-type(8) p:nth-of-type(1) {
-	font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--main-txt-color);
     margin: .1rem 0rem;
 }
 
 section:nth-of-type(8) p:nth-of-type(2) {
-	font-size: 1rem;
+	font-size: var(--font-size-m);
     color: var(--sec-txt-color);
     text-decoration: line-through;
     margin: .1rem 0rem;
@@ -834,4 +954,45 @@ section:nth-of-type(8) p:nth-of-type(2) {
 }
 :root:has([value="dark"]:checked) section:nth-of-type(7) li > ul button img {
     content: url(../images/icons/darkMode/eyeDark.png);
+}
+
+/* LGBTQ+ */
+:root:has([value="gay"]:checked) section:nth-of-type(2) p img {
+    content: url(../images/icons/darkMode/starsingleDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(3) form a img {
+    content: url(../images/icons/darkMode/sizeDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(3) form p:nth-of-type(2) img{
+    content: url(../images/icons/darkMode/klarnaDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(3) form > button:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/heartDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary img {
+    content: url(../images/icons/darkMode/starDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(3) > img:first-of-type {
+    content: url(../images/icons/darkMode/starDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(3) li img {
+    content: url(../images/icons/darkMode/starDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(1) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(2) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(5) details:nth-of-type(3) summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+:root:has([value="gay"]:checked) section:nth-of-type(7) li > ul button img {
+    content: url(../images/icons/darkMode/eyeDark.png);
+}
+
+
+:root:has([value="gay"]:checked) section:nth-of-type(3) form li button {
+    background-color: var(--button-bg-color);
+    color: var(--button-txt-color);
 }

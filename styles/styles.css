@@ -24,6 +24,43 @@
 
     --button-bg-color: light-dark(#000000,#ffffff);
     --button-txt-color: light-dark(#ffffff,#000000);
+
+    --rainbow: linear-gradient(
+        45deg,
+        crimson,
+        darkorange,
+        gold,
+        limegreen,
+        dodgerblue,
+        blueviolet,
+        crimson,
+        darkorange,
+        gold,
+        limegreen,
+        dodgerblue,
+        blueviolet,
+        crimson
+    );
+
+    --scale-small: 0.8;   
+    --scale-medium: 1;     
+    --scale-large: 1.2;  
+
+    --font-size-xs: calc(0.8rem * var(--font-scale));   
+    --font-size-s: calc(0.9rem * var(--font-scale));   
+    --font-size-m: calc(1rem * var(--font-scale));    
+    --font-size-l: calc(1.2rem * var(--font-scale));    
+    --font-size-xl: calc(1.5rem * var(--font-scale));   
+    --font-size-xxl: calc(3rem * var(--font-scale));     
+}
+
+@keyframes rainbow-background {
+    0% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: right top;
+    }
 }
 
 @font-face {
@@ -34,6 +71,23 @@
 body {
     margin: 0;    
     background: var(--main-bg-color);
+    font-family: Helvetica, arial, sans-serif;;
+}
+
+/*************/
+/* FONT SIZE */
+/*************/
+
+:root:has([name="size"][value="small"]:checked) {
+    --font-scale: var(--scale-small);
+}
+
+:root:has([name="size"][value="medium"]:checked) {
+    --font-scale: var(--scale-medium);
+}
+
+:root:has([name="size"][value="large"]:checked) {
+    --font-scale: var(--scale-large);
 }
 
 /**********/
@@ -68,7 +122,8 @@ header > ul {
 
 header button {
     border: none;
-    background-color: var(--main-bg-color);
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /***************/
@@ -85,8 +140,6 @@ nav {
     transition: 0.3s ease-in-out;
     padding: 2em 1em 2em 2em;
     z-index: 1000;
-
-    font-family: Helvetica, arial, sans-serif;
 }
 
 nav.open {
@@ -119,7 +172,7 @@ nav ul:nth-of-type(1) li a {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: var(--font-size-xl);
     color: var(--main-txt-color);
 }
 
@@ -157,7 +210,7 @@ nav ul:nth-of-type(2) li a {
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
-    font-size: .9rem;
+    font-size: var(--font-size-s);
     font-weight: 550;
     color: var(--main-txt-color);
 }
@@ -165,7 +218,7 @@ nav ul:nth-of-type(2) li a {
 /* Account */
 
 nav p {
-    font-size: 1.2rem;
+    font-size: var(--font-size-l);
     color: var(--sec-txt-color);
     padding: 1em 0;
     line-height: 1.5em;
@@ -174,14 +227,14 @@ nav p {
 
 nav p > a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: var(--font-size-l);
     font-weight: 550;
     color: var(--main-txt-color);
 }
 
 nav > a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--font-size-m);
     font-weight: 550;
     color: var(--main-txt-color);
     padding: .5em 1em ;
@@ -232,7 +285,7 @@ nav ul:nth-of-type(3) li a {
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--font-size-m);
     font-weight: 550;
     color: var(--main-txt-color);
 }
@@ -254,8 +307,7 @@ footer details summary{
     border-color: var(--sec-bg-color);
 
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .9rem;
+    font-size: var(--font-size-s);
     color: var(--main-txt-color);
     font-weight: 580;
 }
@@ -284,8 +336,7 @@ footer details li{
 
 footer details  a{
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
+    font-size: var(--font-size-xs);
     color: var(--sec-txt-color);
     font-weight: 580;
 }
@@ -294,8 +345,7 @@ footer details  a{
 
 footer button {
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
+    font-size: var(--font-size-xs);
     color: var(--main-txt-color);
     font-weight: 580;
     text-align: left;
@@ -308,7 +358,7 @@ footer button {
     padding: 1.5rem 0em;
     margin: 0 1em 0 1em;
 
-    width: 95vw;
+    width: 95%;
 
     display: flex;
     justify-content: flex-start;
@@ -334,7 +384,7 @@ footer fieldset legend{
     display: flex;
 }
 
-footer fieldset legend::before {
+footer fieldset:nth-of-type(1) legend::before {
     content: '';
     display: inline-block;
     width: 16px; 
@@ -344,17 +394,26 @@ footer fieldset legend::before {
     margin-right: 1em;
 }
 
+footer fieldset:nth-of-type(2) legend::before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('../images/icons/heart.png') no-repeat;
+    background-size: cover; 
+    margin-right: 1em;
+}
+
 footer fieldset {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
+    font-size: var(--font-size-xs);
     margin: 1em;
-    padding: 0;
+    padding: 0 1em 1em 0;
     border: none;
+    border-bottom: 1px solid var(--sec-bg-color);
 }
 
 footer p {
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
+    font-size: var(--font-size-xs);
     color: var(--sec-txt-color);
     font-weight: 580;
     text-align: left;
@@ -370,8 +429,7 @@ footer ul{
     
 footer ul a{
     text-decoration: none;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: .8rem;
+    font-size: var(--font-size-xs);
     color: var(--sec-txt-color);
     font-weight: 580;
 }
@@ -384,10 +442,11 @@ footer > ul:last-of-type li {
 /* LIGHT/DARK MODE */
 /*******************/
 
-/* Auto Mode */
 :root:has([value="auto"]:checked) {
     color-scheme: light dark;
 }
+
+/* Auto Mode */
 
 @media (prefers-color-scheme: dark) {
     :root:has([value="auto"]:checked) header > a > img {
@@ -442,6 +501,14 @@ footer > ul:last-of-type li {
         content: url(../images/icons/darkMode/storeDark.png);
     }
 
+    :root:has([value="auto"]:checked) section > button:nth-of-type(1) > img {
+        content: url(../images/icons/darkMode/leftDark.png);
+    }
+
+    :root:has([value="auto"]:checked) section > button:nth-of-type(2) > img {
+        content: url(../images/icons/darkMode/rightDark.png);
+    }
+
     :root:has([value="auto"]:checked) footer summary::after {
         background-image: url(../images/icons/darkMode/downDark.png);
     }
@@ -450,8 +517,12 @@ footer > ul:last-of-type li {
         background-image: url(../images/icons/darkMode/globeDark.png);
     }
 
-    :root:has([value="auto"]:checked) footer fieldset legend::before {
+    :root:has([value="auto"]:checked) footer fieldset:nth-of-type(1) legend::before {
         background-image: url(../images/icons/darkMode/light.png);
+    }
+
+    :root:has([value="auto"]:checked) footer fieldset:nth-of-type(2) legend::before {
+        background-image: url(../images/icons/darkMode/letterDark.png);
     }
 
     :root:has([value="auto"]:checked) footer details::after {
@@ -517,6 +588,14 @@ footer > ul:last-of-type li {
     content: url(../images/icons/store.png);
 }
 
+:root:has([value="light"]:checked) section > button:nth-of-type(1) > img {
+    content: url(../images/icons/left.png);
+}
+
+:root:has([value="light"]:checked) section > button:nth-of-type(2) > img {
+    content: url(../images/icons/right.png);
+}
+
 :root:has([value="light"]:checked) footer summary::after {
     background-image: url(../images/icons/down.png);
 }
@@ -525,10 +604,13 @@ footer > ul:last-of-type li {
     background-image: url(../images/icons/globe.png);
 }
 
-:root:has([value="light"]:checked) footer fieldset legend::before {
+:root:has([value="light"]:checked) footer fieldset:nth-of-type(1) legend::before {
     background-image: url(../images/icons/dark.png);
 }
 
+:root:has([value="light"]:checked) footer fieldset:nth-of-type(2) legend::before {
+    background-image: url(../images/icons/letter.png);
+}
 
 /* Dark Mode */
 :root:has([value="dark"]:checked) {
@@ -587,6 +669,14 @@ footer > ul:last-of-type li {
     content: url(../images/icons/darkMode/storeDark.png);
 }
 
+:root:has([value="dark"]:checked) section > button:nth-of-type(1) > img {
+    content: url(../images/icons/darkMode/leftDark.png);
+}
+
+:root:has([value="dark"]:checked) section > button:nth-of-type(2) > img {
+    content: url(../images/icons/darkMode/rightDark.png);
+}
+
 :root:has([value="dark"]:checked) footer summary::after {
     background-image: url(../images/icons/darkMode/downDark.png);
 }
@@ -595,6 +685,113 @@ footer > ul:last-of-type li {
     background-image: url(../images/icons/darkMode/globeDark.png);
 }
 
-:root:has([value="dark"]:checked) footer fieldset legend::before {
+:root:has([value="dark"]:checked) footer fieldset:nth-of-type(1) legend::before {
     background-image: url(../images/icons/darkMode/light.png);
+}
+
+:root:has([value="dark"]:checked) footer fieldset:nth-of-type(2) legend::before {
+    background-image: url(../images/icons/darkMode/letterDark.png);
+}
+
+/* LGBTQ+ */
+
+:root:has([value="gay"]:checked) {
+    --main-txt-color: #ffffff;
+    --sec-txt-color: #ffffff;
+    --trd-text-color: #ffffff;
+    --pic-text-color: #ffffff;
+    
+    --main-bg-color: #000000;
+    --sec-bg-color: #ffffff;
+    --trd-bg-color: #ffffff;
+    
+    --button-bg-color: #ffffff;
+    --button-txt-color: #000000;
+}
+
+:root:has([value="gay"]:checked) body {
+    background-image: var(--rainbow);
+    background-size: 200% 200%;
+    background-position: left bottom;
+    animation: rainbow-background 3s linear infinite;
+}
+
+:root:has([value="gay"]:checked) header {
+    background-color: var(--main-bg-color);
+}
+
+:root:has([value="gay"]:checked) header > a > img {
+    content: url(../images/icons/gay/nikeGay.png);
+}
+
+:root:has([value="gay"]:checked) header > ul > li:nth-of-type(1) > a > img {
+    content: url(../images/icons/gay/searchGay.png);
+}
+
+:root:has([value="gay"]:checked) header > ul > li:nth-of-type(2) > a > img {
+    content: url(../images/icons/gay/userGay.png);
+}
+
+:root:has([value="gay"]:checked) header > ul > li:nth-of-type(3) > a > img {
+    content: url(../images/icons/gay/shoppingGay.png);
+}
+
+:root:has([value="gay"]:checked) header > ul > li:nth-of-type(4) > button > img {
+    content: url(../images/icons/darkMode/menuDark.png);
+}
+
+:root:has([value="gay"]:checked) nav button img {
+    content: url(../images/icons/darkMode/closeDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(1) li img {
+    content: url(../images/icons/darkMode/rightDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(2) li:nth-of-type(1) img {
+    content: url(../images/icons/darkMode/jumpmanDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(2) li:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/converseDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(3) li:nth-of-type(1) img {
+    content: url(../images/icons/darkMode/questionDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(3) li:nth-of-type(2) img {
+    content: url(../images/icons/darkMode/shoppingDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(3) li:nth-of-type(3) img {
+    content: url(../images/icons/darkMode/deliveryDark.png);
+}
+
+:root:has([value="gay"]:checked) nav ul:nth-of-type(3) li:nth-of-type(4) img {
+    content: url(../images/icons/darkMode/storeDark.png);
+}
+
+:root:has([value="gay"]:checked) section > button:nth-of-type(1) > img {
+    content: url(../images/icons/gay/leftGay.png);
+}
+
+:root:has([value="gay"]:checked) section > button:nth-of-type(2) > img {
+    content: url(../images/icons/gay/rightGay.png);
+}
+
+:root:has([value="gay"]:checked) footer summary::after {
+    background-image: url(../images/icons/darkMode/downDark.png);
+}
+
+:root:has([value="gay"]:checked) footer button::before {
+    background-image: url(../images/icons/darkMode/globeDark.png);
+}
+
+:root:has([value="gay"]:checked) footer fieldset:nth-of-type(1) legend::before {
+    background-image: url(../images/icons/darkMode/light.png);
+}
+
+:root:has([value="gay"]:checked) footer fieldset:nth-of-type(2) legend::before {
+    background-image: url(../images/icons/darkMode/letterDark.png);
 }

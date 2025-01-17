@@ -24,10 +24,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Je focus:
   Surface
   1. Werkende slideshow productpagina
-  2. Custom theme
-  3. Side scroll knoppen
-  4. Hover interacties van "Maak de look af"
-  5. Lettergrootte kunnen instellen 
+  2. Custom theme LGTBQ+ 
+  3. Side scroll knoppen 
+  4. Hover interacties van "Maak de look af" 
+  5. Lettergrootte kunnen instellen
  
 </details>
 
@@ -191,8 +191,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  De navigatie is verbeterd ten opzichte van de originele website, vooral na de eerste 
+  toegankelijkheidstest. Er was echter nog wat onduidelijkheid rond het hamburger menu. 
+  Daarnaast zijn de alt-teksten beter uitgewerkt dan in het origineel, en is de website 
+  technisch meer valide, met aanzienlijk minder foutmeldingen dan de originele site.
+  
 </details>
 
 
@@ -239,19 +242,41 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="../FED2425/readme-images/Nike-Homepage-remake.png" width="375px" alt="Homepage">
+  <img src="../FED2425/readme-images/Nike-Productpage-remake.png" width="375px" alt="Productpage">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Uiteindelijk ben ik erg tevreden met de uitkomst van de twee pagina’s die ik heb nagemaakt. 
+  Het werken met selectoren ging aanzienlijk beter dan bij eerdere pogingen, en ik voelde me 
+  veel zelfverzekerder in het gebruik van grid en flexbox. Ook lukte het me om met CSS 
+  verschillende elementen te stylen, waaronder hover-effecten. Dit had ik eerder vooral met 
+  JavaScript gedaan, maar nu ontdekte ik dat het ook prima met CSS kan. Vooral de 
+  "Maak de look af"-sectie was een fijne uitdaging; hierbij kwamen grid en hover samen, 
+  wat me echt het gevoel gaf dat ik deze technieken goed onder de knie krijg.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Daarnaast ben ik blij met de extra toevoegingen, zoals thema’s en aanpasbare lettergrootte. 
+  Dit waren nieuwe aspecten die ik niet had verwacht te leren en waarvan ik niet had ingeschat 
+  dat ik ze zo snel zou oppakken. Over het algemeen ben ik dan ook erg tevreden met het resultaat.
+
+  <img src="../FED2425/readme-images/watGingGoed1.png" width="375px" alt="Maak de look af">
+
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Wat minder goed ging, waren de thema’s en de custom properties. Hoewel ik voor de light- en 
+  dark-modus al custom properties had opgezet, bleek het implementeren van het LGBTQ-thema 
+  behoorlijk omslachtig. Ik had dit thema achteraf toegevoegd, waardoor sommige thema’s niet 
+  goed overschakelden, met name bij de achtergrondkleuren.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Daarnaast had ik graag meer responsiveness willen verwerken, maar ik kreeg dit niet helemaal 
+  uitgezocht. Het aanpassen van verplaatsende onderdelen bleek voor nu te complex. Bij een 
+  volgende poging wil ik deze uitdaging zeker aangaan om mijn vaardigheden hierin verder te 
+  ontwikkelen.
+
+  <img src="../FED2425/readme-images/watGingGoed2.png" width="375px" alt="Lange code">
+  <img src="../FED2425/readme-images/watGingGoed3.png" width="375px" alt="Responsiveness">
+
 </details>
 
 
@@ -284,18 +309,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   15. https://developer.mozilla.org/en-US/docs/Web/CSS/border
   16. https://www.w3schools.com/html/html_forms.asp
   17. https://www.w3schools.com/css/css_form.asp
-  18.
-  19.
-  20.
-  21.
-  22.
-  23.
-  24.
-  25.
-  26.
-  27.
-  28.
-  29.
-  30.
+  18. https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+  19. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+  20. https://www.w3schools.com/js/js_functions.asp
+  21. https://www.w3schools.com/howto/howto_css_display_element_hover.asp
+  22. https://www.w3schools.com/css/css_grid.asp
+  23. https://www.w3schools.com/cssref/sel_nesting.php
+  24. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+  25. https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
+  26. https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  27. https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator
+  28. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+  29. https://developer.mozilla.org/en-US/docs/Glossary/Semantics
+  30. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
 
 </details>
